@@ -16,7 +16,9 @@
                 value
                 fixed
                 app
-                color="transparent">
+                color="transparent"
+                @update:active = "changeNav"
+                >
 
                 <v-btn color="teal" flat value="home">
                     <span>首页</span>
@@ -40,8 +42,7 @@
                 @before-enter="handleBeforeEnter"
                 @after-enter="handleAfterEnter"
                 @before-leave="handleBeforeLeave">
-                <keep-alive
-                    :include="[...keepAlivePages]">
+                <keep-alive>
                     <router-view
                         :key="routerViewKey"
                         class="app-view"
@@ -62,7 +63,6 @@ import {mapState, mapActions} from 'vuex';
 import AppHeader from '@/components/AppHeader';
 import AppSidebar from '@/components/AppSidebar';
 import UpdateToast from '@/components/UpdateToast';
-import {keepAlivePages} from '@/.lavas/router';
 
 const ENABLE_SCROLL_CLASS = 'app-view-scroll-enabled';
 
@@ -81,7 +81,13 @@ export default {
 
         ...mapState('appShell/appHeader', {
             appHeaderShow: state => state.show,
-            bottomNav: state => state.bottomNav
+            
+        }),
+
+         ...mapState('appShell/appNav', {
+            bottomNav: state => state.bottomNav,
+            tabCache: state => state.tabCache,
+            tabDefault: state => state.tabDefault
         }),
 
         ...mapState('appShell/common', {
@@ -102,7 +108,7 @@ export default {
     },
     data() {
         return {
-            keepAlivePages
+            include:[]
         };
     },
     methods: {
@@ -114,7 +120,13 @@ export default {
             'setPageSwitching',
             'savePageScrollPosition'
         ]),
-
+        changeNav(nav) {
+            if (this.$route.path !== this.tabDefault[nav])
+                this.$router.push(this.tabDefault[nav])
+            else {
+                this.tabCache[nav] && this.$router.push(this.tabCache[nav])
+            }
+        },
         /**
          * make current page container scrollable,
          * and restore its scroll position.
@@ -176,93 +188,108 @@ export default {
     },
     mounted () {
         console.log(this)
-        console.log(this.$vuetify)
     }
 };
 </script>
 
 <style lang="stylus">
-@import '~@/assets/stylus/variable'
+@import '~@/assets/stylus/variable';
 
-$page-transition-duration = 0.35s
+$page-transition-duration = 0.35s;
 
-#app
-    font-family 'Avenir', Helvetica, Arial, sans-serif
-    -webkit-font-smoothing antialiased
-    -moz-osx-font-smoothing grayscale
-    text-align center
-    color #2c3e50
-    height 100%
+#app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    height: 100%;
 
-    .bottom-nav.transparent
-        bottom:56px;
+    .bottom-nav.transparent {
+        bottom: 56px;
         background: #ffffff;
-        border-top: 0.5px solid rgba(0,0,0,0.2);
+        border-top: 0.5px solid rgba(0, 0, 0, 0.2);
         box-shadow: none;
+    }
 
-    .application--wrap
-        height 100%;
-        min-height 100%;
+    .application--wrap {
+        height: 100%;
+        min-height: 100%;
+    }
 
-    .app-shell-header
-        position fixed
-        right 0
-        left 0
-        z-index 140
+    .app-shell-header {
+        position: fixed;
+        right: 0;
+        left: 0;
+        z-index: 140;
+    }
 
-    .app-view
-        position absolute
-        top 0
-        right 0
-        bottom 0
-        left 0
-        -webkit-overflow-scrolling touch
-        background white
-        overflow: scroll
-        height: calc( 100vh - 56px - 52px );
-        &::-webkit-scrollbar
-            width 0
-            background transparent
+    .app-view {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        -webkit-overflow-scrolling: touch;
+        background: white;
+        overflow: scroll;
+        height: calc(100% - 56px - 52px);
+        height: -moz-calc(100% - 56px - 52px);
+        height: -webkit-calc(100% - 56px - 52px);
 
-        &.app-view-with-header
-            top $app-header-height
+        &::-webkit-scrollbar {
+            width: 0;
+            background: transparent;
+        }
 
-        &.transition-slide
-            transition transform $page-transition-duration cubic-bezier(0, 0, 0.2, 1)
+        &.app-view-with-header {
+            top: $app-header-height;
+        }
 
-            &.slide-left-enter
-                transform translate(100%, 0)
+        &.transition-slide {
+            transition: transform $page-transition-duration cubic-bezier(0, 0, 0.2, 1);
 
-            &.slide-left-enter-active
-                box-shadow 0 0 16px 2px rgba(0, 0, 0, 0.3)
+            &.slide-left-enter {
+                transform: translate(100%, 0);
+            }
 
-            &.slide-right-enter
-                transform translate(-30%, 0)
-                transition-timing-function linear
+            &.slide-left-enter-active {
+                box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.3);
+            }
 
-            &.slide-right-leave-active
-                transform translate(100%, 0)
-                box-shadow 0 0 16px 2px rgba(0, 0, 0, 0.3)
-                z-index 99
+            &.slide-right-enter {
+                transform: translate(-30%, 0);
+                transition-timing-function: linear;
+            }
 
-            &.slide-left-leave-active
-                transform translate(-30%, 0)
-                transition-timing-function linear
+            &.slide-right-leave-active {
+                transform: translate(100%, 0);
+                box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.3);
+                z-index: 99;
+            }
 
-            &.app-view-scroll-enabled,
-            &.slide-left-enter-active,
-            &.slide-left-leave-active,
-            &.slide-right-enter-active,
-            &.slide-right-leave-active
-                overflow-y auto
+            &.slide-left-leave-active {
+                transform: translate(-30%, 0);
+                transition-timing-function: linear;
+            }
 
-        &.transition-fade
-            opacity 1
-            transition opacity 1s ease
+            &.app-view-scroll-enabled, &.slide-left-enter-active, &.slide-left-leave-active, &.slide-right-enter-active, &.slide-right-leave-active {
+                overflow-y: auto;
+            }
+        }
 
-            &.fade-enter
-                opacity 0
+        &.transition-fade {
+            opacity: 1;
+            transition: opacity 1s ease;
 
-            &.fade-leave-active
-                opacity 0
+            &.fade-enter {
+                opacity: 0;
+            }
+
+            &.fade-leave-active {
+                opacity: 0;
+            }
+        }
+    }
+}
 </style>

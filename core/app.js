@@ -6,16 +6,20 @@
 import Vue from 'vue';
 import Meta from 'vue-meta';
 
-import {createRouter} from '@/.lavas/router';
-import {createStore} from '@/.lavas/store';
+import { createRouter } from '@/.lavas/router';
+import { createStore } from '@/.lavas/store';
 import AppComponent from './App.vue';
 import Vuetify from 'vuetify';
 
 Vue.use(Meta);
 Vue.use(Vuetify);
 Vue.config.productionTip = false;
+Vue.prototype.setState = ((store, state) => {
+    store.dispatch('appShell/appHeader/setAppHeader', state.appHeaderState);
+    store.dispatch('appShell/appNav/setAppNav', state.appNavState);
+})
 
-export function createApp() {
+export function createApp () {
     let router = createRouter();
     let store = createStore();
     let App = Vue.extend({
@@ -23,7 +27,7 @@ export function createApp() {
         store,
         ...AppComponent
     });
-    return {App, router, store};
+    return { App, router, store };
 }
 
 if (module.hot) {

@@ -28,7 +28,7 @@ export const state = () => {
          */
         logoIcon: {
             src: '',
-            alt: '123'
+            alt: ''
         },
 
         /**
@@ -57,13 +57,12 @@ export const state = () => {
          *
          * @type {Array}
          */
-        actions: [],
-        bottomNav: 'home'
+        actions: []
     };
 };
 
 export const mutations = {
-    [SET_APP_HEADER](state, appHeader) {
+    [SET_APP_HEADER] (state, appHeader) {
         state = Object.assign(state, appHeader);
     }
 };
@@ -76,7 +75,7 @@ export const actions = {
      * @param {Function} commit commit
      * @param {Object} appHeader appHeader
      */
-    setAppHeader({commit}, appHeader) {
+    setAppHeader ({ commit }, appHeader) {
         commit(SET_APP_HEADER, appHeader);
     }
 };

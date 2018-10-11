@@ -5,17 +5,17 @@
 
 export const state = () => {
     return {
-        enable: true,
+        enable: false,
         type: 'none',
         effect: 'none'
     };
 };
 
 export const mutations = {
-    setType(state, type) {
+    setType (state, type) {
         state.type = type;
     },
-    setEffect(state, effect) {
+    setEffect (state, effect) {
         state.effect = effect;
     }
 };

@@ -99,39 +99,43 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@require '~@/assets/stylus/variable'
-$btn-color = #fff
+@require '~@/assets/stylus/variable';
 
-.app-header-wrapper
-    display flex
-    justify-content space-between
-    align-items center
-    height $app-header-height
-    background white
-    color $btn-color
-    padding 0
-    border-bottom 1px solid rgba(0,0,0,0.05)
+$btn-color = #fff;
+
+.app-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: $app-header-height;
+    background: white;
+    color: $btn-color;
+    padding: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     // box-shadow 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px rgba(0,0,0,.14), 0 1px 10px rgba(0,0,0,.12)
-    transition transform 0.3s ease-out
+    transition: transform 0.3s ease-out;
 
-    &.slide-down-enter,
-    &.slide-down-leave-to
-        transform translate(0, -100%)
+    &.slide-down-enter, &.slide-down-leave-to {
+        transform: translate(0, -100%);
+    }
 
-    & > div
-        display flex
-        align-items center
+    & > div {
+        display: flex;
+        align-items: center;
+    }
 
-    .app-header-middle
-        color black
-        font-family 'PingFangSC-Regular,Avenir,Helvetica,Arial,sans-serif'
-        font-size 1.5em
-        font-weight 500
+    .app-header-middle {
+        color: black;
+        font-family: 'Helvetica,PingFangSC-Regular,Avenir,Arial,sans-serif';
+        font-size: 1.5em;
+        font-weight: 500;
+    }
 
     // 改变 icon 大小
-    .app-header-icon
-        color $btn-color
-        width 20px
-        height 20px
-
+    .app-header-icon {
+        color: $btn-color;
+        width: 20px;
+        height: 20px;
+    }
+}
 </style>
