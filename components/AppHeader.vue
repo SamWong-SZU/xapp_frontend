@@ -27,6 +27,9 @@
                 </slot>
             </div>
             <div class="app-header-right">
+                <v-btn icon v-if="(showMenu||showBack||showLogo)&& (actions.length<=0)" style="visibility:hidden">
+                    <v-icon color="grey" class="app-header-icon">arrow_back</v-icon>
+                </v-btn>
                 <slot name="actions"
                     v-for="(action, actionIdx) in actions"
                     :icon="action.icon"

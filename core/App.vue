@@ -84,12 +84,6 @@ export default {
             
         }),
 
-         ...mapState('appShell/appNav', {
-            bottomNav: state => state.bottomNav,
-            tabCache: state => state.tabCache,
-            tabDefault: state => state.tabDefault
-        }),
-
         ...mapState('appShell/common', {
             scrollPostionMap: state => state.scrollPostionMap
         }),
@@ -108,7 +102,15 @@ export default {
     },
     data() {
         return {
-            include:[]
+            include:[],
+            bottomNav:'home',
+            tabCache:{},
+            tabDefault: {
+                home: '/',
+                rank: '/detail/2',
+                type: '/detail/3',
+                about: '/detail/4'
+            }
         };
     },
     methods: {
@@ -121,10 +123,12 @@ export default {
             'savePageScrollPosition'
         ]),
         changeNav(nav) {
-            if (this.$route.path !== this.tabDefault[nav])
-                this.$router.push(this.tabDefault[nav])
-            else {
-                this.tabCache[nav] && this.$router.push(this.tabCache[nav])
+            const fromNav = this.bottomNav
+            this.bottomNav = nav
+            if (this.bottomNav === fromNav) {
+                this.$router.push({path:this.tabDefault[nav],query:{nav}})
+            } else {
+                this.$router.push({path:this.tabCache[nav]||this.tabDefault[nav],query:{nav}})
             }
         },
         /**
@@ -187,7 +191,12 @@ export default {
         }
     },
     mounted () {
-        console.log(this)
+    },
+    watch :{
+        '$route' (to,from) {
+            this.bottomNav = to.query.nav || 'home'
+            this.tabCache[this.bottomNav] = to.path
+        }
     }
 };
 </script>

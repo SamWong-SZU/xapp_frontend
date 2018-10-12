@@ -1,6 +1,6 @@
 # xapp_frontend
 
-> XAp项目-前端
+> XApp项目-前端
 
 ## npm 相关命令
 

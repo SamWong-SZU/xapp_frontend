@@ -1,7 +1,7 @@
 {
     "start_url": "/?utm_source=homescreen",
-    "name": "xapp_frontend",
-    "short_name": "xapp_frontend",
+    "name": "Xapp",
+    "short_name": "Xapp",
     "icons": [
         {
             "src": "img/icons/android-chrome-512x512.png",

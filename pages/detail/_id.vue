@@ -10,6 +10,9 @@
                         name: 'detailId',
                         params: {
                             id: Number($route.params.id) + 1
+                        },
+                        query:{
+                            nav:this.$route.query.nav
                         }
                     }">
                         Detail {{Number($route.params.id) + 1}}
@@ -59,12 +62,6 @@ export default {
                     showBack: true,
                     showLogo: false,
                     actions: []
-                },
-                appNavState: {
-                    bottomNav:'rank',
-                    tabCache:{
-                        bottomNav:this.$route.path                        
-                    }
                 }
             }
         }

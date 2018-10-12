@@ -31,18 +31,11 @@ export default {
                     showBack: false,
                     showLogo: false,
                     actions: [],
-                },
-                appNavState:{
-                    bottomNav:'home',
-                    tabCache:{
-                        bottomNav:this.$route.path                        
-                    }
                 }
             }
         }
     },
-
-    activated() {
+    activated () {
         this.setState(this.$store,this.state)
     }
 };

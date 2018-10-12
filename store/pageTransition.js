@@ -7,7 +7,7 @@ export const state = () => {
     return {
         enable: false,
         type: 'none',
-        effect: 'none'
+        effect: 'fade-transition'
     };
 };
 

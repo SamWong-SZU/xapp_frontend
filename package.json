@@ -1,7 +1,7 @@
 {
     "name": "xapp_frontend",
     "version": "0.0.1",
-    "description": "XAp项目-前端",
+    "description": "XApp项目-前端",
     "author": "SamWong <200988743@qq.com>",
     "private": true,
     "lavas": {
