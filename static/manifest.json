@@ -1,5 +1,5 @@
 {
-    "start_url": "/?utm_source=homescreen",
+    "start_url": "/xapp_frontend/dist/#/",
     "name": "Xapp",
     "short_name": "Xapp",
     "icons": [
