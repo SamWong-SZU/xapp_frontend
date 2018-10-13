@@ -16,8 +16,8 @@ self.__precacheManifest = [
     "url": "/xapp_frontend/dist/static/js/vue.8a48e707.js"
   },
   {
-    "revision": "0ff69c8fca81469c28f589d5fad0616e",
-    "url": "/xapp_frontend/dist/static/img/icons/apple-touch-icon-180x180.png"
+    "revision": "83409fb3fe88cb94d7d3df5fe97569c9",
+    "url": "/xapp_frontend/dist/static/img/icons/apple-touch-icon-152x152.png"
   },
   {
     "revision": "9ea6e0201b6da79b0ca7",
@@ -44,12 +44,12 @@ self.__precacheManifest = [
     "url": "/xapp_frontend/dist/static/img/icons/android-chrome-512x512.png"
   },
   {
-    "revision": "6a647ea2aebf94774fb1",
-    "url": "/xapp_frontend/dist/static/js/index.6a647ea2.js"
+    "revision": "24299735b4e2f01ace84",
+    "url": "/xapp_frontend/dist/static/js/index.24299735.js"
   },
   {
-    "revision": "83409fb3fe88cb94d7d3df5fe97569c9",
-    "url": "/xapp_frontend/dist/static/img/icons/apple-touch-icon-152x152.png"
+    "revision": "0ff69c8fca81469c28f589d5fad0616e",
+    "url": "/xapp_frontend/dist/static/img/icons/apple-touch-icon-180x180.png"
   },
   {
     "revision": "7264d2ec7553bb96307af4acbe697faf",
@@ -60,12 +60,12 @@ self.__precacheManifest = [
     "url": "/xapp_frontend/dist/static/img/icons/favicon-32x32.png"
   },
   {
-    "revision": "3742528143340e36915adf388d64060f",
-    "url": "/xapp_frontend/dist/static/img/icons/favicon-16x16.png"
-  },
-  {
     "revision": "588079df8f1b8fde3b3cd691ee65bf06",
     "url": "/xapp_frontend/dist/static/img/icons/apple-touch-icon-76x76.png"
+  },
+  {
+    "revision": "3742528143340e36915adf388d64060f",
+    "url": "/xapp_frontend/dist/static/img/icons/favicon-16x16.png"
   },
   {
     "revision": "570eb83859dc23dd0eec423a49e147fe",
@@ -76,11 +76,11 @@ self.__precacheManifest = [
     "url": "/xapp_frontend/dist/static/fonts/MaterialIcons-Regular.012cf6a1.woff"
   },
   {
-    "revision": "6a647ea2aebf94774fb1",
+    "revision": "24299735b4e2f01ace84",
     "url": "/xapp_frontend/dist/static/css/index.c58205e8.css"
   },
   {
-    "revision": "57152319fd906bbae771e71cc6770b23",
+    "revision": "711234f0c44027271ae73e49fba716a4",
     "url": "/xapp_frontend/dist/index.html"
   },
   {

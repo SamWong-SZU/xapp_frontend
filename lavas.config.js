@@ -55,7 +55,7 @@ module.exports = {
         ]
     },
     router: {
-        mode: 'history',
+        mode: 'hash',
         base: isDev ? config['dev'].routeBase : config['prod'].routeBase,
         pageTransition: {
             type: 'slide',

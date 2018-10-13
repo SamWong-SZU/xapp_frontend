@@ -1,5 +1,5 @@
 {
-    "mode": "history",
+    "mode": "hash",
     "base": "/xapp_frontend/dist/",
     "routes": [
         {
