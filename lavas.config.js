@@ -9,12 +9,24 @@ const path = require('path');
 const BUILD_PATH = path.resolve(__dirname, 'dist');
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = process.env.NODE_ENV === 'production';
+const isGitPage = true
+const gitPagePrefix = isGitPage ? '/xapp_frontend' : '' 
+const config = {
+    dev: {
+        publicPath: '/',
+        routeBase: '/'
+    },
+    prod: {
+        publicPath: gitPagePrefix +'/dist/',
+        routeBase: gitPagePrefix + '/dist/'
+    }
+}
 
 module.exports = {
     build: {
         ssr: false,
         path: BUILD_PATH,
-        publicPath: '/',
+        publicPath: isDev ? config['dev'].publicPath : config['prod'].publicPath,
         ssrCopy: isDev ? [] : [
             {
                 src: 'server.prod.js'
@@ -44,7 +56,7 @@ module.exports = {
     },
     router: {
         mode: 'history',
-        base: '/',
+        base: isDev ? config['dev'].routeBase : config['prod'].routeBase,
         pageTransition: {
             type: 'slide',
             transitionClass: 'slide'
