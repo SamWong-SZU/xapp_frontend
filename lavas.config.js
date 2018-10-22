@@ -10,14 +10,14 @@ const BUILD_PATH = path.resolve(__dirname, 'dist');
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = process.env.NODE_ENV === 'production';
 const isGitPage = true
-const gitPagePrefix = isGitPage ? '/xapp_frontend' : '' 
+const gitPagePrefix = isGitPage ? '/xapp_frontend' : ''
 const config = {
     dev: {
         publicPath: '/',
         routeBase: '/'
     },
     prod: {
-        publicPath: gitPagePrefix +'/dist/',
+        publicPath: gitPagePrefix + '/dist/',
         routeBase: gitPagePrefix + '/dist/'
     }
 }
@@ -80,5 +80,10 @@ module.exports = {
         // URL of appshell page
         // ONLY works in SSR mode
         appshellUrl: '/appshell'
+    },
+    filenames: {
+        fonts: 'font/[name].[hash:8].[ext]',
+        woff: 'font/[name].[hash:8].[ext]',
+        woff2: 'font/[name].[hash:8].[ext]'
     }
 };

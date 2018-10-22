@@ -3,15 +3,15 @@
  * @author SamWong(200988743@qq.com)
  */
 
-import {getMiddlewares, getServerContext, execSeries, createNext} from '@/.lavas/middleware';
+import { getMiddlewares, getServerContext, execSeries, createNext } from '@/.lavas/middleware';
 import lavasConfig from '@/.lavas/config';
-import {createApp} from './app';
+import { createApp } from './app';
 
-const {middleware: middConf = {}} = lavasConfig;
+const { middleware: middConf = {} } = lavasConfig;
 
 export default function (context) {
     return new Promise((resolve, reject) => {
-        let {url, config} = context;
+        let { url, config } = context;
         // remove base first
         let base = config.router.base
             .replace(/^\/+/, '')
@@ -19,13 +19,13 @@ export default function (context) {
         url = url.replace(new RegExp(`^/${base}/?`), '/');
 
         // create app
-        let {App, router, store} = createApp();
+        let { App, router, store } = createApp();
         let app = new App();
 
         // get current url from router
         let fullPath = router.resolve(url).route.fullPath;
         if (fullPath !== url) {
-            return reject({url: fullPath});
+            return reject({ url: fullPath });
         }
 
         // set router's location
@@ -48,8 +48,8 @@ export default function (context) {
                     ...(middConf.all || []),
                     ...(middConf.server || []),
                     ...matchedComponents
-                        .filter(({middleware}) => !!middleware)
-                        .reduce((arr, {middleware}) => arr.concat(middleware), [])
+                        .filter(({ middleware }) => !!middleware)
+                        .reduce((arr, { middleware }) => arr.concat(middleware), [])
                 ];
 
                 // get all the middlewares defined by user
@@ -78,11 +78,11 @@ export default function (context) {
                 // exec asyncData() defined in every matched component
                 await Promise.all(
                     matchedComponents
-                    .filter(({asyncData}) => typeof asyncData === 'function')
-                    .map(({asyncData}) => asyncData({
-                        store,
-                        route: router.currentRoute
-                    }))
+                        .filter(({ asyncData }) => typeof asyncData === 'function')
+                        .map(({ asyncData }) => asyncData({
+                            store,
+                            route: router.currentRoute
+                        }))
                 );
 
                 // mount the latest snapshot of store on context

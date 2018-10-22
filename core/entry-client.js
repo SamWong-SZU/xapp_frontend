@@ -4,24 +4,24 @@
  */
 
 import Vue from 'vue';
-import {getMiddlewares, execSeries, getClientContext} from '@/.lavas/middleware';
+import { getMiddlewares, execSeries, getClientContext } from '@/.lavas/middleware';
 import lavasConfig from '@/.lavas/config';
-import {createApp} from './app';
+import { createApp } from './app';
 import ProgressBar from '@/components/ProgressBar';
 import arrayFindShim from 'array.prototype.find';
 import arrayIncludesShim from 'array-includes';
-import {stringify} from 'querystring';
+import { stringify } from 'querystring';
 
 import 'es6-promise/auto';
-import '@/assets/stylus/main.styl';
+import '../assets/stylus/main.styl';
 
 // Apply shim & polyfill.
 arrayFindShim.shim();
 arrayIncludesShim.shim();
 
 let loading = Vue.prototype.$loading = new Vue(ProgressBar).$mount();
-let {App, router, store} = createApp();
-let {build: {ssr, cssExtract}, middleware: middConf = {}, skeleton: {enable: enableSkeleton, asyncCSS}} = lavasConfig;
+let { App, router, store } = createApp();
+let { build: { ssr, cssExtract }, middleware: middConf = {}, skeleton: { enable: enableSkeleton, asyncCSS } } = lavasConfig;
 let app;
 
 // Sync with server side state.
@@ -48,7 +48,7 @@ Vue.mixin({
      * @param {Object} from from route
      * @param {Function} next next function
      */
-    async beforeRouteUpdate(to, from, next) {
+    async beforeRouteUpdate (to, from, next) {
         let asyncData = this.$options.asyncData;
         if (asyncData) {
             loading.start();
@@ -123,7 +123,7 @@ else {
     }
 }
 
-function handleMiddlewares() {
+function handleMiddlewares () {
     router.beforeEach(async (to, from, next) => {
         // Avoid loop redirect with next(path)
         if (!isInitialRoute && to.path === from.path) {
@@ -138,8 +138,8 @@ function handleMiddlewares() {
             ...(middConf.all || []),
             ...(middConf.client || []),
             ...matchedComponents
-                .filter(({middleware}) => !!middleware)
-                .reduce((arr, {middleware}) => arr.concat(middleware), [])
+                .filter(({ middleware }) => !!middleware)
+                .reduce((arr, { middleware }) => arr.concat(middleware), [])
         ];
 
         // get all the middlewares defined by user
@@ -187,7 +187,7 @@ function handleMiddlewares() {
     });
 }
 
-function handleAsyncData() {
+function handleAsyncData () {
     router.beforeResolve((to, from, next) => {
         let matched = router.getMatchedComponents(to);
         let prevMatched = router.getMatchedComponents(from);
@@ -206,21 +206,21 @@ function handleAsyncData() {
 
         Promise.all(
             activated
-             /**
-              * asyncData gets called in two conditions:
-              * 1. non keep-alive component everytime
-              * 2. keep-alive component only at first time(detected by asyncDataFetched flag)
-              */
-            .filter(c => c.asyncData && (!c.asyncDataFetched || !to.meta.keepAlive))
-            .map(async c => {
-                await c.asyncData({store, route: to});
-                c.asyncDataFetched = true;
-            })
+                /**
+                 * asyncData gets called in two conditions:
+                 * 1. non keep-alive component everytime
+                 * 2. keep-alive component only at first time(detected by asyncDataFetched flag)
+                 */
+                .filter(c => c.asyncData && (!c.asyncDataFetched || !to.meta.keepAlive))
+                .map(async c => {
+                    await c.asyncData({ store, route: to });
+                    c.asyncDataFetched = true;
+                })
         )
-        .then(() => {
-            loading.finish();
-            next();
-        })
-        .catch(next);
+            .then(() => {
+                loading.finish();
+                next();
+            })
+            .catch(next);
     });
 }

@@ -11,32 +11,7 @@
                 @show-sidebar = "handleShowSidebar"
             >
             </app-sidebar>
-            <v-bottom-nav
-                :active.async="bottomNav"
-                value
-                fixed
-                app
-                color="transparent"
-                @update:active = "changeNav"
-                >
-
-                <v-btn color="teal" flat value="home">
-                    <span>首页</span>
-                    <v-icon>home</v-icon>
-                </v-btn>
-                <v-btn color="teal" flat value="type">
-                    <span>分类</span>
-                    <v-icon>search</v-icon>
-                </v-btn>
-                <v-btn color="teal" flat value="rank">
-                    <span>排行榜</span>
-                    <v-icon>whatshot</v-icon>
-                </v-btn>
-                <v-btn color="teal" flat value="about">
-                    <span>关于</span>
-                    <v-icon>info</v-icon>
-                </v-btn>
-            </v-bottom-nav>
+            <app-footer :bottomNav="bottomNav" :changeNav="changeNav"></app-footer>
             <transition
                 :name="pageTransitionEffect"
                 @before-enter="handleBeforeEnter"
@@ -61,6 +36,7 @@
 import Vue from 'vue';
 import {mapState, mapActions} from 'vuex';
 import AppHeader from '@/components/AppHeader';
+import AppFooter from '@/components/AppFooter';
 import AppSidebar from '@/components/AppSidebar';
 import UpdateToast from '@/components/UpdateToast';
 
@@ -71,7 +47,8 @@ export default {
     components: {
         UpdateToast,
         AppHeader,
-        AppSidebar
+        AppSidebar,
+        AppFooter
     },
     computed: {
         ...mapState('pageTransition', {
