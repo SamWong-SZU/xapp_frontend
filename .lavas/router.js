@@ -1,43 +1,55 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
+    
+import _9d49a922ebc8a6d77ca82c0a74289b98 from '@/pages/Appshell.vue';
+    
 
-import appShell from '@/pages/Appshell.vue';
-import id from '@/pages/detail/_id.vue';
-import error from '@/pages/Error.vue';
-import index from '@/pages/Index.vue';
-import search from '@/pages/Search.vue';
+    
+import _f7fc7554d202a317883db2ae067316d3 from '@/pages/detail/_id.vue';
+    
 
+    
+import _d2462dcf0c7beccd286c658e08187914 from '@/pages/Error.vue';
+    
+
+    
+import _67830448037326425509e44bce7632b7 from '@/pages/Index.vue';
+    
+
+    
+import _038de326b0270e97f9eef95b6bc74ed7 from '@/pages/Search.vue';
+    
 
 
 let routes = [
     {
         "path": "/appshell",
-        "component": appShell,
+        "component": _9d49a922ebc8a6d77ca82c0a74289b98,
         "meta": {},
         "name": "appshell"
     },
     {
         "path": "/detail/:id",
-        "component": id,
+        "component": _f7fc7554d202a317883db2ae067316d3,
         "meta": {},
         "name": "detailId"
     },
     {
         "path": "/",
-        "component": index,
+        "component": _67830448037326425509e44bce7632b7,
         "meta": {},
         "name": "index"
     },
     {
         "path": "/search",
-        "component": search,
+        "component": _038de326b0270e97f9eef95b6bc74ed7,
         "meta": {},
         "name": "search"
     },
     {
         "path": "/error",
-        "component": error,
+        "component": _d2462dcf0c7beccd286c658e08187914,
         "meta": {},
         "name": "error",
         "alias": "*"
@@ -102,12 +114,12 @@ if (process.env.VUE_ENV === 'client') {
 
 }
 
-function getHistoryStateKey () {
+function getHistoryStateKey() {
     return history.state ? history.state.key : '';
 }
 
 // 存储数据到本地
-function saveHistoryToLocal (key, data) {
+function saveHistoryToLocal(key, data) {
     try {
         localStorage.setItem(key, typeof data === 'object' ? JSON.stringify(data) : data);
     }
@@ -117,7 +129,7 @@ function saveHistoryToLocal (key, data) {
 }
 
 // 初始化history state
-function initHistoryStateStack () {
+function initHistoryStateStack() {
     // 如果当前tab有历史条目，那么应该把之前存储的state list读取出来
     if (history.length > 1) {
         try {
@@ -146,7 +158,7 @@ function initHistoryStateStack () {
 }
 
 // 初始化history array
-function initHistoryArrayStack (routerBase) {
+function initHistoryArrayStack(routerBase) {
 
     let firstPageFullPath = location.href.replace(location.origin + routerBase, '/');
 
@@ -179,7 +191,7 @@ function initHistoryArrayStack (routerBase) {
  * @param {Object} from 源 route
  * @return {boolean} 是否表示返回
  */
-function isForwardByArray (to, from) {
+function isForwardByArray(to, from) {
 
     // 根据 fullPath 判断当前页面是否访问过，如果访问过，则属于返回
 
@@ -199,7 +211,7 @@ function isForwardByArray (to, from) {
  *
  * @return {boolean} 是否表示返回
  */
-function isForwardByHistory () {
+function isForwardByHistory() {
 
     // 如果访问的页面state和之前访问过的页面相同，则属于返回
 
@@ -220,7 +232,7 @@ function isForwardByHistory () {
  * @param {Object} from 源 route
  * @return {boolean} 是否表示返回
  */
-function isForward (to, from) {
+function isForward(to, from) {
 
     let res = true;
 
@@ -295,19 +307,19 @@ const scrollBehavior = (to, from, savedPosition) => {
 
 
 export const keepAlivePages = routes.filter(route => route.keepAlive || route.meta.keepAlive)
-    .map(route => route.name);
+                            .map(route => route.name);
 
-export function createRouter () {
+export function createRouter() {
     let router = new Router({
         mode: 'hash',
-        base: '/',
+        base: '/xapp_frontend/dist/',
         scrollBehavior,
         routes
     });
 
 
 
-
+    
     if (process.env.VUE_ENV === 'client') {
         if (supportHistory) {
             initHistoryStateStack();
@@ -316,15 +328,15 @@ export function createRouter () {
             initHistoryArrayStack(router.options.base);
         }
     }
-
+    
 
     router.beforeEach((to, from, next) => {
         if (router.app.$store) {
             if (router.app.$store.state.pageTransition.enable) {
-
+                
                 let effect = isForward(to, from) ? 'slide-left'
                     : 'slide-right';
-
+                
                 router.app.$store.commit('pageTransition/setType', 'slide');
                 router.app.$store.commit('pageTransition/setEffect', effect);
             }

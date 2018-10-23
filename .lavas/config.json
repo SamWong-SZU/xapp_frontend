@@ -1,10 +1,10 @@
 {
-    "buildVersion": 1540259493522,
+    "buildVersion": 1540292932304,
     "build": {
         "ssr": false,
         "publicPath": "/xapp_frontend/dist/",
-        "compress": false,
-        "cssExtract": false
+        "compress": true,
+        "cssExtract": true
     },
     "middleware": {
         "all": [],
