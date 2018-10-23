@@ -39,7 +39,6 @@ import AppHeader from '@/components/AppHeader';
 import AppFooter from '@/components/AppFooter';
 import AppSidebar from '@/components/AppSidebar';
 import UpdateToast from '@/components/UpdateToast';
-
 const ENABLE_SCROLL_CLASS = 'app-view-scroll-enabled';
 
 export default {

@@ -23,10 +23,11 @@ if (process.argv.length >= 3 && process.argv[2] !== 'dev') {
  */
 var proxyTable = {
     // proxy table example
-    // '/api': {
-    //     target: 'https://lavas.baidu.com',
+    // '/erp_sale/*': {
+    //     target: 'http://erp2.hwdev.pagoda.com.cn',
     //     changeOrigin: true
     // }
+    //http://erp2.hwtest.pagoda.com.cn/erp_sale/SalConsignOutDetailService/findGoodsOutDetail
 };
 
 var port = process.env.PORT || 3000;
@@ -39,7 +40,7 @@ process.env.NODE_ENV = 'development';
 /**
  * start dev server
  */
-function startDevServer() {
+function startDevServer () {
     app = express();
     core.build()
         .then(function () {
@@ -80,7 +81,7 @@ core.on('rebuild', function () {
     });
 });
 
-core.init(process.env.NODE_ENV, true, {configPath})
+core.init(process.env.NODE_ENV, true, { configPath })
     .then(function () {
         startDevServer();
     });
