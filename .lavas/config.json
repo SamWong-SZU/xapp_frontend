@@ -2,7 +2,7 @@
     "buildVersion": 1540259493522,
     "build": {
         "ssr": false,
-        "publicPath": "/",
+        "publicPath": "/xapp_frontend/dist/",
         "compress": false,
         "cssExtract": false
     },
@@ -13,7 +13,7 @@
     },
     "router": {
         "mode": "hash",
-        "base": "/",
+        "base": "/xapp_frontend/dist/",
         "pageTransition": {
             "type": "slide",
             "transitionClass": "slide"
