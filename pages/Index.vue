@@ -1,18 +1,16 @@
 <template>
-    <div>
-        <div class="content">
-            <div>
-                <h2>LAVAS</h2>
-                <h4>[ˈlɑ:vəz]</h4>
-            </div>
-        </div>
+    <div class="index-page">
+        <recommend></recommend>
     </div>
 </template>
 
 <script>
-
+import recommend from '../components/recommend'
 export default {
     name: 'index',
+    components:{
+        recommend
+    },
     metaInfo: {
         title: 'Home',
         titleTemplate: '%s - Lavas',
@@ -42,16 +40,14 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    flex-wrap: wrap;
-
-    h2 {
-        font-size: 46px;
-        font-weight: 500;
-    }
+.index-page {
+    width: calc(100%);
+    min-height: calc(100% - 52px - 56px);
+    top: 52px;
+    left: 0;
+    background: #fff;
+    position: absolute;
+    padding-top: 20px;
+    padding-bottom: 70px;
 }
 </style>

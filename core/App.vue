@@ -18,12 +18,12 @@
                 @after-enter="handleAfterEnter"
                 @before-leave="handleBeforeLeave">
                 <keep-alive>
-                    <router-view
-                        :key="routerViewKey"
-                        class="app-view"
-                        :class="[{'app-view-with-header': appHeaderShow}, pageTransitionClass]"
-                        :data-page-id="$route.fullPath"
-                    ></router-view>
+                        <router-view
+                            :key="routerViewKey"
+                            class="app-view"
+                            :class="[{'app-view-with-header': appHeaderShow}, pageTransitionClass]"
+                            :data-page-id="$route.fullPath"
+                        ></router-view>
                 </keep-alive>
             </transition>
             <update-toast></update-toast>
@@ -187,9 +187,9 @@ $page-transition-duration = 0.35s;
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
     color: #2c3e50;
     height: 100%;
+    background: #ffffff;
 
     .bottom-nav.transparent {
         bottom: 56px;
