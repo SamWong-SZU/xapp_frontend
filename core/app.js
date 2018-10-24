@@ -10,10 +10,12 @@ import { createRouter } from '@/.lavas/router';
 import { createStore } from '@/.lavas/store';
 import AppComponent from './App.vue';
 import Vuetify from 'vuetify';
+import ajaxService from '@/service/ajax.service.js'
 
 Vue.use(Meta);
 Vue.use(Vuetify);
 Vue.config.productionTip = false;
+Vue.prototype.AjaxService = ajaxService
 Vue.prototype.setState = ((store, state) => {
     store.dispatch('appShell/appHeader/setAppHeader', state.appHeaderState);
 })

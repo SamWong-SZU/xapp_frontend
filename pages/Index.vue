@@ -1,15 +1,17 @@
 <template>
     <div class="index-page">
         <recommend></recommend>
+        <rank></rank>
     </div>
 </template>
 
 <script>
 import recommend from '../components/recommend'
+import rank from '../components/rank'
 export default {
     name: 'index',
     components:{
-        recommend
+        recommend,rank
     },
     metaInfo: {
         title: 'Home',

@@ -17,9 +17,13 @@ const config = {
         routeBase: '/'
     },
     prod: {
+        publicPath: '/',
+        routeBase: '/'
+    },
+    prod: {
         publicPath: gitPagePrefix + '/dist/',
         routeBase: gitPagePrefix + '/dist/'
-    }
+    },
 }
 
 module.exports = {

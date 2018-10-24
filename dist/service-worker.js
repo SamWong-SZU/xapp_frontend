@@ -1,4 +1,4 @@
-importScripts("/xapp_frontend/dist/precache-manifest.601a59bf56978277dcd98c26b5994572.js");
+importScripts("/xapp_frontend/dist/precache-manifest.3143d7010c7c01ee9f8827fa5b78a47a.js");
 
 
         importScripts('/xapp_frontend/dist/static/workbox-v3.6.2/workbox-sw.js');

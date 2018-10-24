@@ -167,6 +167,7 @@ export default {
         }
     },
     mounted () {
+        console.log(this)
     },
     watch :{
         '$route' (to,from) {
