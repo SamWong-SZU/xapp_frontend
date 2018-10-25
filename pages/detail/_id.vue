@@ -66,7 +66,11 @@ export default {
             }
         }
     },
+    mounted () {
+        console.log('mounted')
+    },
     activated() {
+        console.log('act')
         this.setState(this.$store,this.state)
     }
 };

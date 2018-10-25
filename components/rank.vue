@@ -1,67 +1,52 @@
 <template>
-    <section class="rank-page">
+    <section class="rank-list">
         <h2>排行榜
             <router-link :to="{name: 'detailId',params: {id: 1},query:{nav:this.$route.query.nav}}" class="sub-title">
                 更多
             </router-link>
         </h2>
         <p>当下最热门的App，快用起来吧！</p>
-        <ul class="rank" ref='rankList'>
-            <li>
+        <ul class="rank">
+            <li v-for="item in list">
                  <router-link :to="{
                         name: 'detailId',
-                        params: {id: 1},
-                        query:{nav:this.$route.query.nav}}">
-                    <img src="https://d3frsattnbx5l6.cloudfront.net/1539285157804-towergame-icon-512.png">
-                    <span class="app-name">Instagram</span>
-                    <span class="category">Social</span>
+                        params: {id: item.id},
+                        query:{nav:$route.query.nav}}">
+                    <img :src="item.icon">
+                    <span class="app-name">{{item.name}}</span>
+                    <span class="category">{{item.type}}</span>
                  </router-link>
             </li>
-            <li>
-                 <router-link :to="{
-                        name: 'detailId',
-                        params: {id: 1},
-                        query:{nav:this.$route.query.nav}}">
-                    <img src="https://d3frsattnbx5l6.cloudfront.net/1539285157804-towergame-icon-512.png">
-                    <span class="app-name">Instagram</span>
-                    <span class="category">Social</span>
-                 </router-link>
+            <li v-if="!list" v-for="i in fadeListNum">            
+                 <a>
+                    <span style="display:block;width:72px;height:72px"></span>
+                    <span class="app-name">&nbsp</span>
+                    <span class="category">&nbsp</span>
+                 </a>
             </li>
-            <li>
-                 <router-link :to="{
-                        name: 'detailId',
-                        params: {id: 1},
-                        query:{nav:this.$route.query.nav}}">
-                    <img src="https://d3frsattnbx5l6.cloudfront.net/1539285157804-towergame-icon-512.png">
-                    <span class="app-name">Instagram</span>
-                    <span class="category">Social</span>
-                 </router-link>
-            </li>
-            <li>
-                 <router-link :to="{
-                        name: 'detailId',
-                        params: {id: 1},
-                        query:{nav:this.$route.query.nav}}">
-                    <img src="https://d3frsattnbx5l6.cloudfront.net/1539285157804-towergame-icon-512.png">
-                    <span class="app-name">Instagram</span>
-                    <span class="category">Social</span>
-                 </router-link>
-            </li>
-            
         </ul>
     </section>
 </template>
 <script>
-
 export default {
     name: 'rank',
+    data () {
+        return {
+            list:null,
+            fadeListNum: 5
+        }
+    },
     mounted () {
+        setTimeout(()=>{
+            const data = this.AjaxService.getTopList()
+            this.list = data.data.list
+        },1000)
     }
 }
 </script>
 
 <style lang="stylus" scoped>
-.rank-page {
+.rank-list {
     border-top: 0.5px solid rgba(0, 0, 0, 0.15);
     padding-top: 15px;
 
@@ -70,20 +55,19 @@ export default {
         font-size: 18px;
         color: #000000;
         font-weight: 500;
-        margin: 0px 10px 4px;
+        margin: 0px 0px 4px;
         line-height: 25px;
     }
 
     p {
         padding-left: 20px;
-        margin: 0px 10px 0px;
         font-size: 14px;
         color: #999999;
         margin-bottom: 20px;
     }
 
     .sub-title {
-        color: #1976D2;
+        color: #3b8cf7;
         text-decoration: none;
         line-height: 25px;
         float: right;
@@ -107,7 +91,7 @@ export default {
             display: inline-block;
             -webkit-scroll-snap-align: start;
             scroll-snap-align: start;
-            margin: 0px 20px 0px -35px;
+            margin: 0px 21px 0px -35px;
             padding-left: 20px;
 
             a {
@@ -138,7 +122,7 @@ export default {
                     font-size: 14px;
                     color: #999999;
                     text-transform: capitalize;
-                    margin: 3px 0 0 0;
+                    line-height: 16px;
                 }
             }
         }

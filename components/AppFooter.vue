@@ -4,6 +4,7 @@
         value
         fixed
         app
+
         color="transparent"
         @update:active = "handleChangeNav"
     >

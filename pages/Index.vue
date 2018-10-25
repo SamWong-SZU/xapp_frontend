@@ -2,6 +2,15 @@
     <div class="index-page">
         <recommend></recommend>
         <rank></rank>
+        <section class="how-to-install">
+            <h2>如何安装PWA应用</h2>
+            <p>X App推荐您把PWA应用添加到你的主屏上，以获得更加接近原生App的体验。
+                <router-link :to="{
+                        name: 'detailId',
+                        params: {id: 1},
+                        query:{nav:$route.query.nav}}">查看如何添加到主屏。</router-link>
+            </p>
+        </section>
     </div>
 </template>
 
@@ -50,6 +59,28 @@ export default {
     background: #fff;
     position: absolute;
     padding-top: 20px;
-    padding-bottom: 70px;
+
+    .how-to-install {
+        padding: 0 20px;
+        background-color: #f5fbff;
+        border-top: 0.5px solid rgba(0, 0, 0, 0.15);
+        padding-top: 15px;
+
+        h2 {
+            font-size: 18px;
+            margin: 0 0 10px;
+            line-height: 25px;
+        }
+
+        p {
+            padding-bottom: 30px;
+            margin-bottom: 0px;
+        }
+
+        a {
+            color: #3b8cf7;
+            text-decoration: none;
+        }
+    }
 }
 </style>

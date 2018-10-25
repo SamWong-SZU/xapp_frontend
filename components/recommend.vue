@@ -2,45 +2,27 @@
     <section class="recomment-page">
         <h2>精品推荐</h2>
         <ul class="recommend" ref='recommentList'>
-            <li>
+            <li v-for="item in list">
                 <router-link :to="{
                         name: 'detailId',
-                        params: {id: 1},
-                        query:{nav:this.$route.query.nav}}">
+                        params: {id: item.name},
+                        query:{nav:$route.query.nav}}">
+                    <div class="cover-container" :style="{background:'url('+item.img+')'}">
+                        <div class="cover"></div>
+                    </div>
+                    <span class="recommend-title">{{item.name}}</span>
+                    <p class="brief">{{item.description}}</p>
+                </router-link>
+            </li>
+            <li v-if="!list" v-for="i in fadeListNum">
+                <a>
                     <div class="cover-container" >
                         <div class="cover"></div>
                     </div>
-                    <span class="recommend-title">Dice Shake</span>
-                    <p class="brief">Shake your device to roll the dice.</p>
-                </router-link>
+                    <span class="recommend-title">&nbsp</span>
+                    <p class="brief">&nbsp</p>
+                </a>
             </li>
-             
-             <li>
-                <router-link :to="{
-                        name: 'detailId',
-                        params: {id: 1},
-                        query:{nav:this.$route.query.nav}}">
-                    <div class="cover-container" >
-                        <div class="cover"></div>
-                    </div>
-                    <span class="recommend-title">Dice Shake</span>
-                    <p class="brief">Shake your device to roll the dice.</p>
-                </router-link>
-            </li>
-             
-             <li>
-                <router-link :to="{
-                        name: 'detailId',
-                        params: {id: 1},
-                        query:{nav:this.$route.query.nav}}">
-                    <div class="cover-container" >
-                        <div class="cover"></div>
-                    </div>
-                    <span class="recommend-title">Dice Shake</span>
-                    <p class="brief">Shake your device to roll the dice.</p>
-                </router-link>
-            </li>
-            
             <li></li>
         </ul>
     </section>
@@ -49,9 +31,29 @@
 
 export default {
     name: 'recommend',
+    data () {
+        return {
+            list:null,
+            fadeListNum: 3
+        }
+    },
+    activated () {
+        this.setUlScroll()
+    },
+    methods: {
+        setUlScroll() {
+            this.$nextTick(()=>{
+                const ul = this.$refs.recommentList
+                ul.scrollTo(20,0)
+            })
+        }
+    },
     mounted () {
-        const ul = this.$refs.recommentList
-        ul.scrollTo(20,0)
+        setTimeout(()=>{
+            const data = this.AjaxService.getRecommendList()
+            this.list = data.data.list 
+            this.setUlScroll()
+        },1000)
     }
 }
 </script>
@@ -85,7 +87,7 @@ h2 {
 
     li {
         display: inline-block;
-        width: calc(100% - 10px);
+        width: calc(100%);
         -webkit-scroll-snap-align: start;
         scroll-snap-align: start;
         padding-left: 20px;
@@ -122,7 +124,6 @@ h2 {
         border-radius: 10px;
 
         .cover {
-            background: url('https://d3frsattnbx5l6.cloudfront.net/1534062252021-twitter-banner.png');
             background-size: cover;
             position: absolute;
             top: 0;

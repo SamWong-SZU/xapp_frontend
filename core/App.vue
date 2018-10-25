@@ -191,10 +191,11 @@ $page-transition-duration = 0.35s;
     height: 100%;
     background: #ffffff;
 
-    .bottom-nav.transparent {
+    div.bottom-nav.transparent {
+        box-sizing: content-box;
         bottom: 56px;
         background: #ffffff;
-        border-top: 0.5px solid rgba(0, 0, 0, 0.2);
+        border-top: 1px solid rgba(220, 164, 164, 0.2) !important;
         box-shadow: none;
     }
 
@@ -219,9 +220,9 @@ $page-transition-duration = 0.35s;
         -webkit-overflow-scrolling: touch;
         background: white;
         overflow: scroll;
-        height: calc(100% - 56px - 52px);
-        height: -moz-calc(100% - 56px - 52px);
-        height: -webkit-calc(100% - 56px - 52px);
+        height: calc(100% - 56px - 32px);
+        height: -moz-calc(100% - 56px - 32px);
+        height: -webkit-calc(100% - 56px - 32px);
 
         &::-webkit-scrollbar {
             width: 0;

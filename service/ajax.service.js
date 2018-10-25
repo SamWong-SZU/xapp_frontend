@@ -12,7 +12,12 @@ const devUrl = config[process.env.NODE_ENV].devUrl || config['production'].devUr
 
 const ajaxService = {
     getRecommendList () {
-        return axios.get(`${devUrl}/www.baidu.com`)
+        return require('@/mockdata/recommendlist.json')
+        // return axios.get(`${devUrl}/www.baidu.com`)
+    },
+    getTopList () {
+        return require('@/mockdata/toplist.json')
+        // return axios.get(`${devUrl}/www.baidu.com`)
     }
 }
 
