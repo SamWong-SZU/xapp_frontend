@@ -18,6 +18,18 @@ const ajaxService = {
     getTopList () {
         return require('@/mockdata/toplist.json')
         // return axios.get(`${devUrl}/www.baidu.com`)
+    },
+    getAppListByTools () {
+        return require('@/mockdata/getAppListByTools.json')
+        // return axios.get(`${devUrl}/www.baidu.com`)
+    },
+    getAppById () {
+        return require('@/mockdata/getAppById.json')
+        // return axios.get(`${devUrl}/www.baidu.com`)
+    },
+    announcements () {
+        return require('@/mockdata/announcements.json')
+        // return axios.get(`${devUrl}/www.baidu.com`)
     }
 }
 

@@ -6,11 +6,11 @@
                 @click-menu="handleClickHeaderMenu"
                 @click-back="handleClickHeaderBack">
             </app-header>
-            <app-sidebar
+            <!-- <app-sidebar
                 @hide-sidebar = "handleHideSidebar"
                 @show-sidebar = "handleShowSidebar"
             >
-            </app-sidebar>
+            </app-sidebar> -->
             <app-footer :bottomNav="bottomNav" :changeNav="changeNav"></app-footer>
             <transition
                 :name="pageTransitionEffect"
@@ -83,8 +83,8 @@ export default {
             tabCache:{},
             tabDefault: {
                 home: '/',
-                rank: '/detail/2',
-                type: '/detail/3',
+                rank: '/rank',
+                type: '/type',
                 about: '/detail/4'
             }
         };
@@ -158,13 +158,13 @@ export default {
         },
         handleClickHeaderMenu() {
             this.showSidebar();
-        },
-        handleHideSidebar() {
-            this.hideSidebar();
-        },
-        handleShowSidebar() {
-            this.showSidebar();
         }
+        // handleHideSidebar() {
+        //     this.hideSidebar();
+        // },
+        // handleShowSidebar() {
+        //     this.showSidebar();
+        // }
     },
     mounted () {
         console.log(this)
