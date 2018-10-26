@@ -2,64 +2,64 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
     
-import _15404895834409d49a922ebc8a6d77ca82c0a74289b98 from '@/pages/Appshell.vue';
+import _15405170654719d49a922ebc8a6d77ca82c0a74289b98 from '@/pages/Appshell.vue';
     
 
     
-import _1540489583440f7fc7554d202a317883db2ae067316d3 from '@/pages/detail/_id.vue';
+import _1540517065471f7fc7554d202a317883db2ae067316d3 from '@/pages/detail/_id.vue';
     
 
     
-import _1540489583440d2462dcf0c7beccd286c658e08187914 from '@/pages/Error.vue';
+import _1540517065471d2462dcf0c7beccd286c658e08187914 from '@/pages/Error.vue';
     
 
     
-import _154048958344067830448037326425509e44bce7632b7 from '@/pages/Index.vue';
+import _154051706547167830448037326425509e44bce7632b7 from '@/pages/Index.vue';
     
 
     
-import _1540489583440038de326b0270e97f9eef95b6bc74ed7 from '@/pages/Search.vue';
+import _1540517065471038de326b0270e97f9eef95b6bc74ed7 from '@/pages/Search.vue';
     
 
     
-import _1540489583440880fa1a4d9aea3afedb8e855d75ac68d from '@/pages/Type.vue';
+import _1540517065471880fa1a4d9aea3afedb8e855d75ac68d from '@/pages/Type.vue';
     
 
 
 let routes = [
     {
         "path": "/appshell",
-        "component": _15404895834409d49a922ebc8a6d77ca82c0a74289b98,
+        "component": _15405170654719d49a922ebc8a6d77ca82c0a74289b98,
         "meta": {},
         "name": "appshell"
     },
     {
         "path": "/detail/:id",
-        "component": _1540489583440f7fc7554d202a317883db2ae067316d3,
+        "component": _1540517065471f7fc7554d202a317883db2ae067316d3,
         "meta": {},
         "name": "detailId"
     },
     {
         "path": "/",
-        "component": _154048958344067830448037326425509e44bce7632b7,
+        "component": _154051706547167830448037326425509e44bce7632b7,
         "meta": {},
         "name": "index"
     },
     {
         "path": "/search",
-        "component": _1540489583440038de326b0270e97f9eef95b6bc74ed7,
+        "component": _1540517065471038de326b0270e97f9eef95b6bc74ed7,
         "meta": {},
         "name": "search"
     },
     {
         "path": "/type",
-        "component": _1540489583440880fa1a4d9aea3afedb8e855d75ac68d,
+        "component": _1540517065471880fa1a4d9aea3afedb8e855d75ac68d,
         "meta": {},
         "name": "type"
     },
     {
         "path": "/error",
-        "component": _1540489583440d2462dcf0c7beccd286c658e08187914,
+        "component": _1540517065471d2462dcf0c7beccd286c658e08187914,
         "meta": {},
         "name": "error",
         "alias": "*"

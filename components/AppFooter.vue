@@ -18,7 +18,7 @@
         </v-btn>
         <v-btn color="teal" flat value="rank">
             <span>排行榜</span>
-            <v-icon>whatshot</v-icon>
+            <i class="iconfont icon-rankedfirst"></i>            
         </v-btn>
         <v-btn color="teal" flat value="about">
             <span>关于</span>
