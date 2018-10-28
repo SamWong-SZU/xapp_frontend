@@ -43,7 +43,6 @@ export default {
     },
     methods: {
         handleChangeNav(nav) {
-            console.log(nav)
             this.changeNav(nav)
         }
     }

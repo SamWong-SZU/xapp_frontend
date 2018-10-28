@@ -11,7 +11,6 @@ import { createStore } from '@/.lavas/store';
 import AppComponent from './App.vue';
 import Vuetify from 'vuetify';
 import ajaxService from '@/service/ajax.service.js'
-
 Vue.use(Meta);
 Vue.use(Vuetify);
 Vue.config.productionTip = false;

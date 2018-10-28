@@ -9,7 +9,7 @@ const config = {
 }
 
 const devUrl = config[process.env.NODE_ENV].devUrl || config['production'].devUrl
-const isProd = config[process.env.NODE_ENV] === 'production'
+const isProd = process.env.NODE_ENV === 'production'
 const ajaxService = {
     getRecommendList () {
         return isProd ? axios.get(`${devUrl}/www.baidu.com`) : require('@/mockdata/recommendlist.json')

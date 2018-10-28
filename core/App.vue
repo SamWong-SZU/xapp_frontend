@@ -220,9 +220,9 @@ $page-transition-duration = 0.35s;
         -webkit-overflow-scrolling: touch;
         background: white;
         overflow: scroll;
-        height: calc(100% - 56px - 32px);
-        height: -moz-calc(100% - 56px - 32px);
-        height: -webkit-calc(100% - 56px - 32px);
+        height: calc(100% - 57px - 52px);
+        height: -moz-calc(100% - 57px - 52px);
+        height: -webkit-calc(100% - 57px - 52px);
 
         &::-webkit-scrollbar {
             width: 0;

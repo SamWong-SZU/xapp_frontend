@@ -45,7 +45,6 @@ export default {
         }
     },
     activated () {
-        console.log('index act')
         this.setState(this.$store,this.state)
     }
 };

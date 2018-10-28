@@ -1,50 +1,14 @@
 <template>
-    <div class="detail-wrapper">
-        <v-layout row wrap>
-            <v-flex xs10 offset-xs1>
-                <article class="detail-content text-xs-center">
-                    <header class="detail-title text-xs-center">
-                        Detail {{$route.params.id}}
-                    </header>
-                    <router-link :to="{
-                        name: 'appId',
-                        params: {
-                            id: Number($route.params.id) + 1
-                        },
-                        query:{
-                            nav:this.$route.query.nav
-                        }
-                    }">
-                        Detail {{Number($route.params.id) + 1}}
-                    </router-link>
-                    <p>
-                    Progressive Web Apps are user experiences that have the reach of the web, and are:
-Reliable - Load instantly and never show the downasaur, even in uncertain network conditions.
-Fast - Respond quickly to user interactions with silky smooth animations and no janky scrolling.
-                    </p>
-                    <p>
-                    Progressive Web Apps are user experiences that have the reach of the web, and are:
-Reliable - Load instantly and never show the downasaur, even in uncertain network conditions.
-Fast - Respond quickly to user interactions with silky smooth animations and no janky scrolling.
-                    </p>
-                    <p>
-                    Progressive Web Apps are user experiences that have the reach of the web, and are:
-Reliable - Load instantly and never show the downasaur, even in uncertain network conditions.
-Fast - Respond quickly to user interactions with silky smooth animations and no janky scrolling.
-                    </p>
-                    <p>
-                    Progressive Web Apps are user experiences that have the reach of the web, and are:
-Reliable - Load instantly and never show the downasaur, even in uncertain network conditions.
-Fast - Respond quickly to user interactions with silky smooth animations and no janky scrolling.
-                    </p>
-                    <p>
-                    Progressive Web Apps are user experiences that have the reach of the web, and are:
-Reliable - Load instantly and never show the downasaur, even in uncertain network conditions.
-Fast - Respond quickly to user interactions with silky smooth animations and no janky scrolling.
-                    </p>
-                </article>
-            </v-flex>
-        </v-layout>
+    <div class="app-page">
+        <section class="app-header">
+            <div class="app-icon-container">
+                <img class="app-icon" src="https://d3frsattnbx5l6.cloudfront.net/1532688849983-twitterlite-icon-default.882fa4ccf6539401.png">
+            </div>
+            <div class="app-info">
+                <h1 class="app-title">Twitter Lite</h1>
+                <span class="app-category">Social</span>
+            </div>
+        </section>
     </div>
 </template>
 
@@ -67,26 +31,44 @@ export default {
         }
     },
     mounted () {
-        console.log('mounted')
     },
     activated() {
-        console.log('act')
         this.setState(this.$store,this.state)
     }
 };
 </script>
 
 <style lang="stylus" scoped>
-.detail-content {
-    font-size: 16px;
-    line-height: 30px;
-    margin-top: 30px;
-
-    .detail-title {
-        margin-bottom: 20px;
-        padding: 10px 0;
-        font-size: 36px;
-        font-weight: bold;
+.app-page{
+    padding: 20px 20px 70px;
+    .app-header{
+        margin: 0 0 20px 0;
+        .app-icon-container{
+            width: 100px;
+            margin: 0 20px 0 0;
+            float: left;
+            img.app-icon {
+                width: 100px;
+                height: 100px;
+                border-radius: 15px;
+            }
+        }
+        .app-info {
+            width: calc(100% - 120px);
+            float: left;
+            h1.app-title {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                font-size: 20px;
+                margin: 0 0 5px 0;
+            }
+            .app-category {
+                color: #999999;
+                font-size: 18px;
+                text-transform: capitalize;
+            }
+        }
     }
 }
 </style>
