@@ -84,8 +84,8 @@ export default {
             tabDefault: {
                 home: '/',
                 rank: '/rank',
-                type: '/type',
-                about: '/detail/4'
+                search: '/search',
+                about: '/app/4'
             }
         };
     },

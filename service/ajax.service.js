@@ -9,27 +9,22 @@ const config = {
 }
 
 const devUrl = config[process.env.NODE_ENV].devUrl || config['production'].devUrl
-
+const isProd = config[process.env.NODE_ENV] === 'production'
 const ajaxService = {
     getRecommendList () {
-        return require('@/mockdata/recommendlist.json')
-        // return axios.get(`${devUrl}/www.baidu.com`)
+        return isProd ? axios.get(`${devUrl}/www.baidu.com`) : require('@/mockdata/recommendlist.json')
     },
-    getTopList () {
-        return require('@/mockdata/toplist.json')
-        // return axios.get(`${devUrl}/www.baidu.com`)
+    getTopList (a) {
+        return isProd ? axios.get(`${devUrl}/www.baidu.com`) : require('@/mockdata/toplist.json')
     },
-    getAppListByTools () {
-        return require('@/mockdata/getAppListByTools.json')
-        // return axios.get(`${devUrl}/www.baidu.com`)
+    getAppListByTools (type) {
+        return isProd ? axios.get(`${devUrl}/www.baidu.com/type`) : require('@/mockdata/getAppListByTools.json')
     },
     getAppById () {
-        return require('@/mockdata/getAppById.json')
-        // return axios.get(`${devUrl}/www.baidu.com`)
+        return isProd ? axios.get(`${devUrl}/www.baidu.com`) : require('@/mockdata/getAppById.json')
     },
     announcements () {
-        return require('@/mockdata/announcements.json')
-        // return axios.get(`${devUrl}/www.baidu.com`)
+        return isProd ? axios.get(`${devUrl}/www.baidu.com`) : require('@/mockdata/announcements.json')
     }
 }
 

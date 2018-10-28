@@ -3,14 +3,41 @@
     "base": "/xapp_frontend/dist/",
     "routes": [
         {
+            "path": "/app/:id",
+            "name": "appId",
+            "meta": {}
+        },
+        {
             "path": "/appshell",
             "name": "appshell",
             "meta": {}
         },
         {
-            "path": "/detail/:id",
-            "name": "detailId",
-            "meta": {}
+            "path": "/category",
+            "name": "category",
+            "meta": {},
+            "children": [
+                {
+                    "path": "food",
+                    "name": "categoryFood",
+                    "meta": {}
+                },
+                {
+                    "path": "game",
+                    "name": "categoryGame",
+                    "meta": {}
+                },
+                {
+                    "path": "life",
+                    "name": "categoryLife",
+                    "meta": {}
+                },
+                {
+                    "path": "tool",
+                    "name": "categoryTool",
+                    "meta": {}
+                }
+            ]
         },
         {
             "path": "/",
@@ -18,8 +45,18 @@
             "meta": {}
         },
         {
+            "path": "/rank",
+            "name": "rank",
+            "meta": {}
+        },
+        {
             "path": "/search",
             "name": "search",
+            "meta": {}
+        },
+        {
+            "path": "/search0",
+            "name": "search0",
             "meta": {}
         },
         {

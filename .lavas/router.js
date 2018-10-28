@@ -2,64 +2,126 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
     
-import _15405170654719d49a922ebc8a6d77ca82c0a74289b98 from '@/pages/Appshell.vue';
+import _ac9e913cac15b2560fbc5dbf02611e51 from '@/pages/app/_id.vue';
     
 
     
-import _1540517065471f7fc7554d202a317883db2ae067316d3 from '@/pages/detail/_id.vue';
+import _9d49a922ebc8a6d77ca82c0a74289b98 from '@/pages/Appshell.vue';
     
 
     
-import _1540517065471d2462dcf0c7beccd286c658e08187914 from '@/pages/Error.vue';
+import _cf0c953fd88db9b6100e184c36af9628 from '@/pages/Category.vue';
     
 
     
-import _154051706547167830448037326425509e44bce7632b7 from '@/pages/Index.vue';
+import _f764dc25a83161d436ccb96cee88a4e4 from '@/pages/category/Food.vue';
     
 
     
-import _1540517065471038de326b0270e97f9eef95b6bc74ed7 from '@/pages/Search.vue';
+import _cb0a25cdb618759f9ca0bc32beabf0ab from '@/pages/category/Game.vue';
     
 
     
-import _1540517065471880fa1a4d9aea3afedb8e855d75ac68d from '@/pages/Type.vue';
+import _688067f53bd6b8bcf09991faaaa9ec03 from '@/pages/category/Life.vue';
+    
+
+    
+import _0e13dcd855d35d388ba55eb8c844a39c from '@/pages/category/Tool.vue';
+    
+
+    
+import _d2462dcf0c7beccd286c658e08187914 from '@/pages/Error.vue';
+    
+
+    
+import _67830448037326425509e44bce7632b7 from '@/pages/Index.vue';
+    
+
+    
+import _81f19b94ff0b8b812318690677ef611e from '@/pages/Rank.vue';
+    
+
+    
+import _038de326b0270e97f9eef95b6bc74ed7 from '@/pages/Search.vue';
+    
+
+    
+import _986f940f7f7b275c8f6e50dc9be3744f from '@/pages/Search0.vue';
     
 
 
 let routes = [
     {
+        "path": "/app/:id",
+        "component": _ac9e913cac15b2560fbc5dbf02611e51,
+        "meta": {},
+        "name": "appId"
+    },
+    {
         "path": "/appshell",
-        "component": _15405170654719d49a922ebc8a6d77ca82c0a74289b98,
+        "component": _9d49a922ebc8a6d77ca82c0a74289b98,
         "meta": {},
         "name": "appshell"
     },
     {
-        "path": "/detail/:id",
-        "component": _1540517065471f7fc7554d202a317883db2ae067316d3,
+        "path": "/category",
+        "component": _cf0c953fd88db9b6100e184c36af9628,
         "meta": {},
-        "name": "detailId"
+        "name": "category",
+        "children": [
+            {
+                "path": "food",
+                "component": _f764dc25a83161d436ccb96cee88a4e4,
+                "meta": {},
+                "name": "categoryFood"
+            },
+            {
+                "path": "game",
+                "component": _cb0a25cdb618759f9ca0bc32beabf0ab,
+                "meta": {},
+                "name": "categoryGame"
+            },
+            {
+                "path": "life",
+                "component": _688067f53bd6b8bcf09991faaaa9ec03,
+                "meta": {},
+                "name": "categoryLife"
+            },
+            {
+                "path": "tool",
+                "component": _0e13dcd855d35d388ba55eb8c844a39c,
+                "meta": {},
+                "name": "categoryTool"
+            }
+        ]
     },
     {
         "path": "/",
-        "component": _154051706547167830448037326425509e44bce7632b7,
+        "component": _67830448037326425509e44bce7632b7,
         "meta": {},
         "name": "index"
     },
     {
+        "path": "/rank",
+        "component": _81f19b94ff0b8b812318690677ef611e,
+        "meta": {},
+        "name": "rank"
+    },
+    {
         "path": "/search",
-        "component": _1540517065471038de326b0270e97f9eef95b6bc74ed7,
+        "component": _038de326b0270e97f9eef95b6bc74ed7,
         "meta": {},
         "name": "search"
     },
     {
-        "path": "/type",
-        "component": _1540517065471880fa1a4d9aea3afedb8e855d75ac68d,
+        "path": "/search0",
+        "component": _986f940f7f7b275c8f6e50dc9be3744f,
         "meta": {},
-        "name": "type"
+        "name": "search0"
     },
     {
         "path": "/error",
-        "component": _1540517065471d2462dcf0c7beccd286c658e08187914,
+        "component": _d2462dcf0c7beccd286c658e08187914,
         "meta": {},
         "name": "error",
         "alias": "*"
@@ -322,7 +384,7 @@ export const keepAlivePages = routes.filter(route => route.keepAlive || route.me
 export function createRouter() {
     let router = new Router({
         mode: 'hash',
-        base: '/',
+        base: '/xapp_frontend/dist/',
         scrollBehavior,
         routes
     });

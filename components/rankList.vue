@@ -1,7 +1,7 @@
 <template>
     <section class="rank-list">
         <h2>排行榜
-            <router-link :to="{name: 'detailId',params: {id: 1},query:{nav:this.$route.query.nav}}" class="sub-title">
+            <router-link :to="{name: 'rank',query:{nav:'rank'}}" class="sub-title">
                 更多
             </router-link>
         </h2>
@@ -9,7 +9,7 @@
         <ul class="rank">
             <li v-for="item in list">
                  <router-link :to="{
-                        name: 'detailId',
+                        name: 'appId',
                         params: {id: item.id},
                         query:{nav:$route.query.nav}}">
                     <img :src="item.icon">
@@ -37,10 +37,8 @@ export default {
         }
     },
     mounted () {
-        setTimeout(()=>{
-            const data = this.AjaxService.getTopList()
-            this.list = data.data.list
-        },1000)
+        const data = this.AjaxService.getTopList()
+        this.list = data.data.list
     }
 }
 </script>

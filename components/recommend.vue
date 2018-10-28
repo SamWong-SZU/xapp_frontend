@@ -4,8 +4,8 @@
         <ul class="recommend" ref='recommentList'>
             <li v-for="item in list">
                 <router-link :to="{
-                        name: 'detailId',
-                        params: {id: item.name},
+                        name: 'appId',
+                        params: {id: item.id},
                         query:{nav:$route.query.nav}}">
                     <div class="cover-container" :style="{background:'url('+item.img+')'}">
                         <div class="cover"></div>

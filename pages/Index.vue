@@ -1,12 +1,12 @@
 <template>
     <div class="index-page">
         <recommend></recommend>
-        <rank></rank>
+        <rank-list></rank-list>
         <section class="how-to-install">
             <h2>如何安装PWA应用</h2>
             <p>X App推荐您把PWA应用添加到你的主屏上，以获得更加接近原生App的体验。
                 <router-link :to="{
-                        name: 'detailId',
+                        name: 'appId',
                         params: {id: 1},
                         query:{nav:$route.query.nav}}">查看如何添加到主屏。</router-link>
             </p>
@@ -16,11 +16,11 @@
 
 <script>
 import recommend from '../components/recommend'
-import rank from '../components/rank'
+import rankList from '../components/rankList'
 export default {
     name: 'index',
     components:{
-        recommend,rank
+        recommend,rankList
     },
     metaInfo: {
         title: 'Home',
@@ -45,6 +45,7 @@ export default {
         }
     },
     activated () {
+        console.log('index act')
         this.setState(this.$store,this.state)
     }
 };

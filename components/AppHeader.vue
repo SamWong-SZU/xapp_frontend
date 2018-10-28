@@ -114,7 +114,7 @@ $btn-color = #fff;
     background: white;
     color: $btn-color;
     padding: 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
     // box-shadow 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px rgba(0,0,0,.14), 0 1px 10px rgba(0,0,0,.12)
     transition: transform 0.3s ease-out;
 

@@ -7,7 +7,7 @@
                         Detail {{$route.params.id}}
                     </header>
                     <router-link :to="{
-                        name: 'detailId',
+                        name: 'appId',
                         params: {
                             id: Number($route.params.id) + 1
                         },
@@ -51,7 +51,7 @@ Fast - Respond quickly to user interactions with silky smooth animations and no 
 <script>
 
 export default {
-    name: 'detailId',
+    name: 'appId',
     data () {
         return {
             state:{

@@ -12,7 +12,7 @@
             <span>首页</span>
             <v-icon>home</v-icon>
         </v-btn>
-        <v-btn color="teal" flat value="type">
+        <v-btn color="teal" flat value="search">
             <span>分类</span>
             <v-icon>search</v-icon>
         </v-btn>
@@ -43,6 +43,7 @@ export default {
     },
     methods: {
         handleChangeNav(nav) {
+            console.log(nav)
             this.changeNav(nav)
         }
     }

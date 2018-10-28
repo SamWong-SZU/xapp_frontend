@@ -19,11 +19,6 @@ Vue.prototype.AjaxService = ajaxService
 Vue.prototype.setState = ((store, state) => {
     store.dispatch('appShell/appHeader/setAppHeader', state.appHeaderState);
 })
-Vue.prototype.routerPush = function (data, nav) {
-    data.query = data.query || {}
-    data.query.nav = nav
-    this.$router.push(data)
-}
 export function createApp () {
     let router = createRouter();
     let store = createStore();
