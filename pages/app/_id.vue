@@ -50,6 +50,7 @@ export default {
         this.setState(this.$store,this.state)
     },
     activated() {
+        console.log(this.$route.query.from)
         this.setState(this.$store,this.state)
     }
 };

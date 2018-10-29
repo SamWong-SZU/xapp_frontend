@@ -1,6 +1,6 @@
 import Vue from 'vue';
 
-import Skeleton from 'E:\\xapp_frontend\\core\\Skeleton.vue';
+import Skeleton from 'F:\\project\\xapp_frontend\\core\\Skeleton.vue';
 
 
 export default new Vue({

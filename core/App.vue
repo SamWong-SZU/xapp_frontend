@@ -75,7 +75,7 @@ export default {
             let {name, params} = this.$route;
             let paramKeys = Object.keys(params);
             if (paramKeys.length) {
-                return name + paramKeys.reduce((prev, cur) => prev + params[cur], '');
+                return name + paramKeys.reduce((prev, cur) => prev + params[cur], '') + `-${this.bottomNav}`;
             }
             return null;
         }
