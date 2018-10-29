@@ -2,94 +2,94 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
     
-import _1540740255902ac9e913cac15b2560fbc5dbf02611e51 from '@/pages/app/_id.vue';
+import _ac9e913cac15b2560fbc5dbf02611e51 from '@/pages/app/_id.vue';
     
 
     
-import _15407402559029d49a922ebc8a6d77ca82c0a74289b98 from '@/pages/Appshell.vue';
+import _9d49a922ebc8a6d77ca82c0a74289b98 from '@/pages/Appshell.vue';
     
 
     
-import _1540740255902cf0c953fd88db9b6100e184c36af9628 from '@/pages/Category.vue';
+import _cf0c953fd88db9b6100e184c36af9628 from '@/pages/Category.vue';
     
 
     
-import _1540740255905f764dc25a83161d436ccb96cee88a4e4 from '@/pages/category/Food.vue';
+import _f764dc25a83161d436ccb96cee88a4e4 from '@/pages/category/Food.vue';
     
 
     
-import _1540740255905cb0a25cdb618759f9ca0bc32beabf0ab from '@/pages/category/Game.vue';
+import _cb0a25cdb618759f9ca0bc32beabf0ab from '@/pages/category/Game.vue';
     
 
     
-import _1540740255905688067f53bd6b8bcf09991faaaa9ec03 from '@/pages/category/Life.vue';
+import _688067f53bd6b8bcf09991faaaa9ec03 from '@/pages/category/Life.vue';
     
 
     
-import _15407402559050e13dcd855d35d388ba55eb8c844a39c from '@/pages/category/Tool.vue';
+import _0e13dcd855d35d388ba55eb8c844a39c from '@/pages/category/Tool.vue';
     
 
     
-import _1540740255902d2462dcf0c7beccd286c658e08187914 from '@/pages/Error.vue';
+import _d2462dcf0c7beccd286c658e08187914 from '@/pages/Error.vue';
     
 
     
-import _154074025590267830448037326425509e44bce7632b7 from '@/pages/Index.vue';
+import _67830448037326425509e44bce7632b7 from '@/pages/Index.vue';
     
 
     
-import _154074025590281f19b94ff0b8b812318690677ef611e from '@/pages/Rank.vue';
+import _81f19b94ff0b8b812318690677ef611e from '@/pages/Rank.vue';
     
 
     
-import _1540740255902038de326b0270e97f9eef95b6bc74ed7 from '@/pages/Search.vue';
+import _038de326b0270e97f9eef95b6bc74ed7 from '@/pages/Search.vue';
     
 
     
-import _1540740255902986f940f7f7b275c8f6e50dc9be3744f from '@/pages/Search0.vue';
+import _986f940f7f7b275c8f6e50dc9be3744f from '@/pages/Search0.vue';
     
 
 
 let routes = [
     {
         "path": "/app/:id",
-        "component": _1540740255902ac9e913cac15b2560fbc5dbf02611e51,
+        "component": _ac9e913cac15b2560fbc5dbf02611e51,
         "meta": {},
         "name": "appId"
     },
     {
         "path": "/appshell",
-        "component": _15407402559029d49a922ebc8a6d77ca82c0a74289b98,
+        "component": _9d49a922ebc8a6d77ca82c0a74289b98,
         "meta": {},
         "name": "appshell"
     },
     {
         "path": "/category",
-        "component": _1540740255902cf0c953fd88db9b6100e184c36af9628,
+        "component": _cf0c953fd88db9b6100e184c36af9628,
         "meta": {},
         "name": "category",
         "children": [
             {
                 "path": "food",
-                "component": _1540740255905f764dc25a83161d436ccb96cee88a4e4,
+                "component": _f764dc25a83161d436ccb96cee88a4e4,
                 "meta": {},
                 "name": "categoryFood"
             },
             {
                 "path": "game",
-                "component": _1540740255905cb0a25cdb618759f9ca0bc32beabf0ab,
+                "component": _cb0a25cdb618759f9ca0bc32beabf0ab,
                 "meta": {},
                 "name": "categoryGame"
             },
             {
                 "path": "life",
-                "component": _1540740255905688067f53bd6b8bcf09991faaaa9ec03,
+                "component": _688067f53bd6b8bcf09991faaaa9ec03,
                 "meta": {},
                 "name": "categoryLife"
             },
             {
                 "path": "tool",
-                "component": _15407402559050e13dcd855d35d388ba55eb8c844a39c,
+                "component": _0e13dcd855d35d388ba55eb8c844a39c,
                 "meta": {},
                 "name": "categoryTool"
             }
@@ -97,31 +97,31 @@ let routes = [
     },
     {
         "path": "/",
-        "component": _154074025590267830448037326425509e44bce7632b7,
+        "component": _67830448037326425509e44bce7632b7,
         "meta": {},
         "name": "index"
     },
     {
         "path": "/rank",
-        "component": _154074025590281f19b94ff0b8b812318690677ef611e,
+        "component": _81f19b94ff0b8b812318690677ef611e,
         "meta": {},
         "name": "rank"
     },
     {
         "path": "/search",
-        "component": _1540740255902038de326b0270e97f9eef95b6bc74ed7,
+        "component": _038de326b0270e97f9eef95b6bc74ed7,
         "meta": {},
         "name": "search"
     },
     {
         "path": "/search0",
-        "component": _1540740255902986f940f7f7b275c8f6e50dc9be3744f,
+        "component": _986f940f7f7b275c8f6e50dc9be3744f,
         "meta": {},
         "name": "search0"
     },
     {
         "path": "/error",
-        "component": _1540740255902d2462dcf0c7beccd286c658e08187914,
+        "component": _d2462dcf0c7beccd286c658e08187914,
         "meta": {},
         "name": "error",
         "alias": "*"
@@ -384,7 +384,7 @@ export const keepAlivePages = routes.filter(route => route.keepAlive || route.me
 export function createRouter() {
     let router = new Router({
         mode: 'hash',
-        base: '/',
+        base: '/xapp_frontend/dist/',
         scrollBehavior,
         routes
     });

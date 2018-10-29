@@ -1,5 +1,5 @@
 <template>
-   <app-list type="rank" rank :request="this.AjaxService.getTopList"></app-list>
+   <app-list type="rank" rank :request="this.AjaxService.getTopList" from="/rank?nav=rank"></app-list>
 </template>
 
 <script>
@@ -7,6 +7,10 @@ import appList from '../components/appList'
 export default {
     components:{
         appList
+    },
+    metaInfo: {
+        title: 'Xapp',
+        titleTemplate: '%s - PWA应用商店'
     },
     name: 'category',
     data () {
@@ -22,6 +26,9 @@ export default {
                 }
             }
         }
+    },
+    activated () {
+        this.setState(this.$store,this.state)
     }
 };
 </script>

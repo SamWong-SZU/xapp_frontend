@@ -23,20 +23,16 @@ export default {
         recommend,rankList
     },
     metaInfo: {
-        title: 'Home',
-        titleTemplate: '%s - Lavas',
-        meta: [
-            {name: 'keywords', content: 'lavas PWA'},
-            {name: 'description', content: '基于 Vue 的 PWA 解决方案，帮助开发者快速搭建 PWA 应用，解决接入 PWA 的各种问题'}
-        ]
+        title: 'Xapp',
+        titleTemplate: '%s - PWA应用商店'
     },
     data () {
         return {
             state:{
                 appHeaderState:{
                     show: true,
-                    title: 'XApp',
-                    showMenu: true,
+                    title: 'XApp - ',
+                    showMenu: false,
                     showBack: false,
                     showLogo: false,
                     actions: [],

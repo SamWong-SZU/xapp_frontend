@@ -1,7 +1,7 @@
 <template>
     <ul class="app-list">
         <li v-for="item in data">
-            <router-link :to="{name: 'appId',params: {id: item.id},query:{nav:$route.query.nav}}" class="sub-title">
+            <router-link :to="{name: 'appId',params: {id: item.id},query:{nav:$route.query.nav,from}}" class="sub-title">
                 <div style="float:left;margin-bottom: 15px;">
                     <img :src="item.icon" class="app-icon">
                 </div>
@@ -31,6 +31,9 @@ export default {
         },
         request:{
             type:Function
+        },
+        from:{
+            type:String
         }
     },
     data () {
@@ -51,34 +54,40 @@ export default {
 ul.app-list {
     li {
         list-style-type: none;
-    border-bottom: 0.5px solid rgba(0,0,0,0.1);
-    background: #ffffff;
+        border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+        background: #ffffff;
+
         a {
             font-size: 16px;
             display: block;
             padding: 15px 20px 15px 20px;
             text-decoration: none;
-            color:#000000;
-            img{
+            color: #000000;
+
+            img {
                 display: block;
                 width: 64px;
                 height: 64px;
             }
-            div.app-info{
+
+            div.app-info {
                 float: left;
                 padding: 10px 0 0 15px;
                 height: 54px;
-                .index,.index-none{
+
+                .index, .index-none {
                     display: inline-block;
                     width: 20px;
                     color: #999999;
                     text-align: right;
                     padding-right: 10px;
                 }
-                .index-none{
-                    visibility hidden;
+
+                .index-none {
+                    visibility: hidden;
                 }
-                .category{
+
+                .category {
                     color: #999;
                 }
             }

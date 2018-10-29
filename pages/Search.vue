@@ -21,15 +21,12 @@
 <script>
 export default {
     name: 'type',
-    metaInfo: {
-        title: '分类页'
-    },
     data () {
         return {
             state:{
                 appHeaderState:{
                     show: true,
-                    title: 'XApp',
+                    title: '分类页',
                     showMenu: false,
                     showBack: false,
                     showLogo: false,
@@ -37,6 +34,10 @@ export default {
                 }
             }
         }
+    },
+    metaInfo: {
+        title: 'Xapp',
+        titleTemplate: '%s - PWA应用商店'
     },
     activated () {
         this.setState(this.$store,this.state)
@@ -47,29 +48,32 @@ export default {
 <style lang="stylus" scoped>
 .type-page {
     h2 {
-        padding:20px 20px 0;
+        padding: 20px 20px 0;
         font-size: 18px;
         color: #000;
         font-weight: 500;
         margin: 0 0 10px;
         line-height: 25px;
     }
+
     ul {
-        border-bottom: .5px solid rgba(0,0,0,.1)
+        border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+
         a {
             color: #000000;
             text-decoration: none;
         }
+
         li {
             list-style-type: none;
             padding: 0 10px 0 20px;
-            border-top: 0.5px solid rgba(0,0,0,0.1);
+            border-top: 0.5px solid rgba(0, 0, 0, 0.1);
             font-size: 16px;
             line-height: 54px;
 
-        i {
-            font-size: 20px;
-            margin-right: 12px;
+            i {
+                font-size: 20px;
+                margin-right: 12px;
             }
         }
     }

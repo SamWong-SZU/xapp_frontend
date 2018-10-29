@@ -1,5 +1,5 @@
 <template>
-   <app-list type="life" :request="this.AjaxService.getAppListByTools"></app-list>
+   <app-list type="life" :request="this.AjaxService.getAppListByTools" from="/category/life?nav=search"></app-list>
 </template>
 
 <script>
@@ -8,6 +8,10 @@ export default {
     components:{
         appList
     },
+    metaInfo: {
+        title: 'Xapp',
+        titleTemplate: '%s - PWA应用商店'
+    },
     data () {
         return {
             state:{
@@ -15,7 +19,7 @@ export default {
                     show: true,
                     title: '生活',
                     showMenu: false,
-                    showBack: true,
+                    showBack: '/search?nav=search',
                     showLogo: false,
                     actions: []
                 }

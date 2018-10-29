@@ -9,7 +9,7 @@ const config = {
 }
 
 const devUrl = config[process.env.NODE_ENV].devUrl || config['production'].devUrl
-const isProd = process.env.NODE_ENV === 'production'
+const isProd = process.env.NODE_ENV === 'production' && false
 const ajaxService = {
     getRecommendList () {
         return isProd ? axios.get(`${devUrl}/www.baidu.com`) : require('@/mockdata/recommendlist.json')
@@ -20,7 +20,7 @@ const ajaxService = {
     getAppListByTools (type) {
         return isProd ? axios.get(`${devUrl}/www.baidu.com/type`) : require('@/mockdata/getAppListByTools.json')
     },
-    getAppById () {
+    getAppById (id) {
         return isProd ? axios.get(`${devUrl}/www.baidu.com`) : require('@/mockdata/getAppById.json')
     },
     announcements () {

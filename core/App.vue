@@ -1,5 +1,9 @@
 <template>
     <div id="app">
+        <!-- <v-alert
+      :value="true"
+      type="success"
+    ></v-alert> -->
         <v-app>
             <app-header
                 class="app-shell-header"
@@ -153,8 +157,12 @@ export default {
                 scrollPosition: {y: scrollTop}
             });
         },
-        handleClickHeaderBack() {
-            this.$router.go(-1);
+        handleClickHeaderBack(showBack) {
+            if (showBack === true) {
+                this.$router.go(-1)
+            } else {
+                this.$router.push(showBack)
+            }
         },
         handleClickHeaderMenu() {
             this.showSidebar();
@@ -172,7 +180,7 @@ export default {
     watch :{
         '$route' (to,from) {
             this.bottomNav = to.query.nav || 'home'
-            this.tabCache[this.bottomNav] = to.path
+            this.tabCache[this.bottomNav] = to.fullPath
         }
     }
 };

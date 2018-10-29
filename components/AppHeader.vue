@@ -12,7 +12,7 @@
                 <v-btn
                     icon
                     v-if="showBack"
-                    @click.native="handleClick('back')">
+                    @click.native="handleClick('back',{showBack})">
                     <v-icon color="grey" class="app-header-icon">arrow_back</v-icon>
                 </v-btn>
                 <div v-if="showLogo" @click="handleClick('logo')">
@@ -73,7 +73,7 @@ export default {
          * @param {string} source 点击事件源名称 menu/logo/action
          * @param {Object} data 随点击事件附带的数据对象
          */
-        handleClick(source, {actionIdx, route} = {}) {
+        handleClick(source, {actionIdx, route,showBack} = {}) {
 
             // 页面正在切换中，不允许操作，防止滑动效果进行中切换
             if (this.isPageSwitching) {
@@ -85,7 +85,11 @@ export default {
             if (source === 'action') {
                 eventData.actionIdx = actionIdx;
             }
-
+            if (source === 'back') {
+                this.$emit(`click-${source}`, showBack);
+                EventBus.$emit(`app-header:click-${source}`, showBack);
+                return
+            }
             // 发送给父组件，内部处理
             this.$emit(`click-${source}`, eventData);
 
