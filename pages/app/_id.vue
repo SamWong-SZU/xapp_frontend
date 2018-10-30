@@ -98,15 +98,15 @@ export default {
                 text-decoration: none;
                 border-radius: 50px;
                 box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
-                border: 0.5px solid #1C80F7;
-                color: #1C80F7;
+                border: 0.5px solid #3399FF;
+                color: #3399FF;
                 font-size: 14px;
                 font-weight: 500;
                 margin: 10px 0 0 0;
                 padding: 4px 20px 4px 15px;
 
                 i {
-                    color: #1C80F7;
+                    color: #3399FF;
                     padding-right: 10px;
                 }
             }

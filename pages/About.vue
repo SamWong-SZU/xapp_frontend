@@ -1,5 +1,6 @@
 <template>
     <div class="about-page">
+        <div class="qrcode-container" v-show="showQr" @click="showQr=false"><img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example"></div>
         <h2>XApp空间是什么</h2>
         <p class="bottom">App是PWA (Progressive Web Apps) 的应用商店。在这里, 您可以找到许多跨平台的 (同时适用于iOS、安卓、PC) , 基于网页技术的应用程序。</p>
         <section class="follow">
@@ -7,7 +8,7 @@
             <p>关注我们的微信公众号，获取更多消息。</p>
             <div class="container">
                 <i class="iconfont icon-wechat"><span class="gzh">微信公众号</span></i>
-                <span class="click-here">XAppZone</span>
+                <span class="click-here" @click="showQr=true">XAppZone</span>
             </div>
         </section>
         <h2 style="margin-top:20px">PWA是什么？</h2>
@@ -31,7 +32,7 @@
         <h2>如何提交我的PWA到XApp空间？</h2>
         <p class="bottom">请<span class="click-here">点击这里</span>向我们提交您的PWA，我们将在24小时内完成审核</p>
         <h2>如何联系你？</h2>
-        <p class="bottom">如果您有任何问题或者意见，请<span class="click-here">点击这里</span>向我们反馈，我们将会尽快查看</p>
+        <p>如果您有任何问题或者意见，请<span class="click-here" @click="toFeedBack">点击这里</span>向我们反馈，我们将会尽快查看</p>
 
     </div>
 </template>
@@ -49,6 +50,7 @@ export default {
     name: 'About',
     data () {
         return {
+            showQr:false,
             state:{
                 appHeaderState: {
                     show: true,
@@ -61,6 +63,11 @@ export default {
             }
         }
     },
+    methods: {
+        toFeedBack(){
+            this.$router.push('/feedback')
+        }
+    },
     activated () {
         this.setState(this.$store,this.state)
     }
@@ -69,8 +76,21 @@ export default {
 
 <style lang="stylus" scoped>
 .about-page {
+
     padding: 20px;
     color: #000;
+    padding-bottom:0px;
+    .qrcode-container{
+        background: rgba(255, 255, 255, .9);
+        width: calc(100%);
+        height: calc(100% - 52px - 56px);
+        position: fixed;
+        top: 52px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     .click-here {
         color: #3399FF;
@@ -107,7 +127,6 @@ export default {
     h2 {
         font-size: 18px;
     }
-
     p {
         color: #999999;
         letter-spacing: 0.3px;
@@ -123,6 +142,10 @@ export default {
         list-style-type: decimal;
         padding-left: 20px;
         margin-top: 10px;
+        color:#000000;
+        h4{
+            font-weight:400;
+        }
     }
 }
 </style>

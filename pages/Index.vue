@@ -6,9 +6,8 @@
             <h2>如何安装PWA应用</h2>
             <p>X App推荐您把PWA应用添加到你的主屏上，以获得更加接近原生App的体验。
                 <router-link :to="{
-                        name: 'appId',
-                        params: {id: 1},
-                        query:{nav:$route.query.nav}}">查看如何添加到主屏。</router-link>
+                        name: 'about',
+                        query:{nav:'about'}}">查看如何添加到主屏。</router-link>
             </p>
         </section>
     </div>
@@ -74,7 +73,7 @@ export default {
         }
 
         a {
-            color: #3b8cf7;
+            color: #3399FF;
             text-decoration: none;
         }
     }

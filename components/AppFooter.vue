@@ -3,7 +3,6 @@
         :active.async="bottomNav"
         value
         fixed
-        app
 
         color="transparent"
         @update:active = "handleChangeNav"
