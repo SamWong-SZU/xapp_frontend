@@ -89,7 +89,7 @@ export default {
                 home: '/',
                 rank: '/rank',
                 search: '/search',
-                about: '/app/4'
+                about: '/about'
             }
         };
     },

@@ -31,7 +31,7 @@ export default {
             state:{
                 appHeaderState:{
                     show: true,
-                    title: 'XApp - ',
+                    title: 'XApp',
                     showMenu: false,
                     showBack: false,
                     showLogo: false,

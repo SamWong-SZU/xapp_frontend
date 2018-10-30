@@ -1,15 +1,16 @@
 <template>
     <ul class="app-list">
-        <li v-for="item in data">
+        <li v-for="(item,index) in data">
             <router-link :to="{name: 'appId',params: {id: item.id},query:{nav:$route.query.nav,from}}" class="sub-title">
                 <div style="float:left;margin-bottom: 15px;">
                     <img :src="item.icon" class="app-icon">
                 </div>
                 <div class="app-info">
-                    <span class="index" v-if="rank">1</span>
+                    <span class="index" v-if="rank">{{index+1}}</span>
+                    <span class="index-none" v-else>{{index+1}}</span>                    
                     <span class="app-name">{{item.name}}</span>
                     <div></div>
-                    <span class="index-none" v-if="rank">1</span>
+                    <span class="index-none">{{index+1}}</span>
                     <span class="category" v-if="item.type">{{item.type}}</span>
                     <span class="category" v-else>{{type}}</span>
                 </div>
@@ -80,7 +81,7 @@ ul.app-list {
                     width: 20px;
                     color: #999999;
                     text-align: right;
-                    padding-right: 10px;
+                    padding-right: 5px;
                 }
 
                 .index-none {

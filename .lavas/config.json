@@ -1,5 +1,5 @@
 {
-    "buildVersion": 1540827931532,
+    "buildVersion": 1540893177004,
     "build": {
         "ssr": false,
         "publicPath": "/xapp_frontend/dist/",
@@ -26,7 +26,7 @@
     },
     "serviceWorker": {
         "enable": true,
-        "swDest": "F:\\project\\xapp_frontend\\dist\\service-worker.js"
+        "swDest": "E:\\xapp_frontend\\dist\\service-worker.js"
     },
     "skeleton": {
         "enable": true,

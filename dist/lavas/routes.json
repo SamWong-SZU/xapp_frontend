@@ -3,6 +3,11 @@
     "base": "/xapp_frontend/dist/",
     "routes": [
         {
+            "path": "/about",
+            "name": "about",
+            "meta": {}
+        },
+        {
             "path": "/app/:id",
             "name": "appId",
             "meta": {}

@@ -2,6 +2,10 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
     
+import _2243cf1a5b5a1b7cb5e6d6af47ece8b7 from '@/pages/About.vue';
+    
+
+    
 import _ac9e913cac15b2560fbc5dbf02611e51 from '@/pages/app/_id.vue';
     
 
@@ -51,6 +55,12 @@ import _986f940f7f7b275c8f6e50dc9be3744f from '@/pages/Search0.vue';
 
 
 let routes = [
+    {
+        "path": "/about",
+        "component": _2243cf1a5b5a1b7cb5e6d6af47ece8b7,
+        "meta": {},
+        "name": "about"
+    },
     {
         "path": "/app/:id",
         "component": _ac9e913cac15b2560fbc5dbf02611e51,
