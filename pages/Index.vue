@@ -22,7 +22,7 @@ export default {
         recommend,rankList
     },
     metaInfo: {
-        title: 'Xapp',
+        title: 'X App',
         titleTemplate: '%s - PWA应用商店'
     },
     data () {
@@ -30,7 +30,7 @@ export default {
             state:{
                 appHeaderState:{
                     show: true,
-                    title: 'XApp',
+                    title: 'X App',
                     showMenu: false,
                     showBack: false,
                     showLogo: false,

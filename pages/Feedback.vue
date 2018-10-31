@@ -19,7 +19,7 @@
 <script>
 export default {
     metaInfo: {
-        title: 'Xapp',
+        title: 'X App',
         titleTemplate: '%s - PWA应用商店'
     },
     name: 'Feedback',
@@ -55,9 +55,10 @@ export default {
             if (this.validateEmail() && this.validateAdvice()) {
                 const {email,content} = this
                 this.AjaxService.feedback({email,content}).then((res)=>{
-                    if (res.resultCode === 0) {
-                        this.$router.push('/')
-                    }
+                    this.email = ''
+                    this.content = ''
+                    this.showError = false
+                    this.$router.push({name:'Thank',query:{nav:'about'}})
                 })
             }
         }

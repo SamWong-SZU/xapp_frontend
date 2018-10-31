@@ -23,7 +23,7 @@
 export default {
     name: 'appId',
     metaInfo: {
-        title: 'Xapp',
+        title: 'X App',
         titleTemplate: '%s - PWA应用商店'
     },
     data () {

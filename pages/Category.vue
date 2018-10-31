@@ -4,7 +4,7 @@
 <script>
 export default {
     metaInfo: {
-        title: 'Xapp',
+        title: 'X App',
         titleTemplate: '%s - PWA应用商店'
     }
 }

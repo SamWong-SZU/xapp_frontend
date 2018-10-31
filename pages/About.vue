@@ -30,7 +30,7 @@
             </ul>
         </p>
         <h2>如何提交我的PWA到XApp空间？</h2>
-        <p class="bottom">请<span class="click-here">点击这里</span>向我们提交您的PWA，我们将在24小时内完成审核</p>
+        <p class="bottom">请<span class="click-here" @click="toSubmit">点击这里</span>向我们提交您的PWA，我们将在24小时内完成审核</p>
         <h2>如何联系你？</h2>
         <p>如果您有任何问题或者意见，请<span class="click-here" @click="toFeedBack">点击这里</span>向我们反馈，我们将会尽快查看</p>
 
@@ -44,7 +44,7 @@ export default {
         appList
     },
     metaInfo: {
-        title: 'Xapp',
+        title: 'X App',
         titleTemplate: '%s - PWA应用商店'
     },
     name: 'About',
@@ -66,6 +66,9 @@ export default {
     methods: {
         toFeedBack(){
             this.$router.push({name:'feedback',query:{nav:'about'}})
+        },
+        toSubmit () {
+            this.$router.push({name:'submit',query:{nav:'about'}})
         }
     },
     activated () {
