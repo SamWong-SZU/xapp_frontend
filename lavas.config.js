@@ -10,15 +10,15 @@ const BUILD_PATH = path.resolve(__dirname, 'dist');
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = process.env.NODE_ENV === 'production';
 const isGitPage = true
-const gitPagePrefix = isGitPage ? '/xapp_frontend' : ''
+const gitPagePrefix = isGitPage ? '/xapp_frontend/dist/' : '/'
 const config = {
     dev: {
         publicPath: '/',
         routeBase: '/'
     },
     prod: {
-        publicPath: gitPagePrefix + '/dist/',
-        routeBase: gitPagePrefix + '/dist/'
+        publicPath: gitPagePrefix,
+        routeBase: gitPagePrefix
     }
 }
 

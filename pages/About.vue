@@ -65,7 +65,7 @@ export default {
     },
     methods: {
         toFeedBack(){
-            this.$router.push('/feedback')
+            this.$router.push({name:'feedback',query:{nav:'about'}})
         }
     },
     activated () {
@@ -76,12 +76,12 @@ export default {
 
 <style lang="stylus" scoped>
 .about-page {
-
     padding: 20px;
     color: #000;
-    padding-bottom:0px;
-    .qrcode-container{
-        background: rgba(255, 255, 255, .9);
+    padding-bottom: 0px;
+
+    .qrcode-container {
+        background: rgba(255, 255, 255, 0.9);
         width: calc(100%);
         height: calc(100% - 52px - 56px);
         position: fixed;
@@ -127,6 +127,7 @@ export default {
     h2 {
         font-size: 18px;
     }
+
     p {
         color: #999999;
         letter-spacing: 0.3px;
@@ -142,9 +143,10 @@ export default {
         list-style-type: decimal;
         padding-left: 20px;
         margin-top: 10px;
-        color:#000000;
-        h4{
-            font-weight:400;
+        color: #000000;
+
+        h4 {
+            font-weight: 400;
         }
     }
 }

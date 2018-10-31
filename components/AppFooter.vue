@@ -7,19 +7,19 @@
     >
         <v-btn color="teal" flat value="home" @click="handleChangeNav('home')">
             <span>首页</span>
-            <v-icon>home</v-icon>
+            <i class="iconfont icon-home"></i>
         </v-btn>
         <v-btn color="teal" flat value="search" @click="handleChangeNav('search')">
             <span>分类</span>
-            <v-icon>search</v-icon>
+            <i class="iconfont icon-search"></i>            
         </v-btn>
         <v-btn color="teal" flat value="rank" @click="handleChangeNav('rank')">
             <span>排行榜</span>
-            <i class="iconfont icon-rankedfirst"></i>            
+            <i class="iconfont icon-trophy"></i>            
         </v-btn>
         <v-btn color="teal" flat value="about" @click="handleChangeNav('about')">
             <span>关于</span>
-            <v-icon>info</v-icon>
+            <i class="iconfont icon-question-circle"></i>            
         </v-btn>
     </v-bottom-nav>
 </template>

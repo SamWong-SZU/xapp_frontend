@@ -15,7 +15,8 @@
                 @show-sidebar = "handleShowSidebar"
             >
             </app-sidebar> -->
-            <app-footer :bottomNav="bottomNav" :changeNav="changeNav"></app-footer>
+            <!-- <app-footer :bottomNav="bottomNav" :changeNav="changeNav"></app-footer> -->
+            <footer><app-footer :bottomNav="bottomNav" :changeNav="changeNav"></app-footer></footer>
             <transition
                 :name="pageTransitionEffect"
                 @before-enter="handleBeforeEnter"
@@ -193,6 +194,11 @@ export default {
 $page-transition-duration = 0.35s;
 
 #app {
+    footer {
+        position: fixed;
+        bottom: 0;
+    }
+
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
