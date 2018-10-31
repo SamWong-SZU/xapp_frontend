@@ -1,5 +1,5 @@
 <template>
-   <app-list type="life" :request="this.AjaxService.getAppListByTools" from="/category/life?nav=search"></app-list>
+   <app-list type="life" :request="this.AjaxService.getAppListByType" from="/category/life?nav=search"></app-list>
 </template>
 
 <script>

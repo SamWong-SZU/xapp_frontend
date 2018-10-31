@@ -103,6 +103,7 @@ export default {
             'savePageScrollPosition'
         ]),
         changeNav(nav) {
+            console.log(nav)
             const fromNav = this.bottomNav
             this.bottomNav = nav
             if (this.bottomNav === fromNav) {
@@ -199,8 +200,8 @@ $page-transition-duration = 0.35s;
     height: 100%;
     background: #ffffff;
 
-    div.bottom-nav.transparent {
-        box-sizing: content-box;
+    .v-bottom-nav {
+        box-sizing: border-box;
         bottom: 56px;
         background: #ffffff;
         border-top: 1px solid rgba(220, 164, 164, 0.2) !important;
@@ -228,9 +229,9 @@ $page-transition-duration = 0.35s;
         -webkit-overflow-scrolling: touch;
         background: white;
         overflow: scroll;
-        height: calc(100% - 57px - 52px);
-        height: -moz-calc(100% - 57px - 52px);
-        height: -webkit-calc(100% - 57px - 52px);
+        height: calc(100% - 56px - 52px);
+        height: -moz-calc(100% - 56px - 52px);
+        height: -webkit-calc(100% - 56px - 50px);
 
         &::-webkit-scrollbar {
             width: 0;

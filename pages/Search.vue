@@ -1,5 +1,5 @@
 <template>
-    <div class="type-page">
+    <div class="search-page">
         <h2>热门类别</h2>
         <ul>
             <router-link :to="{name: 'categoryGame',query:{nav:$route.query.nav}}">
@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.type-page {
+.search-page {
     h2 {
         padding: 20px 20px 0;
         font-size: 18px;
@@ -58,6 +58,7 @@ export default {
 
     ul {
         border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+        padding-left: 0;
 
         a {
             color: #000000;

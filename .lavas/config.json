@@ -1,10 +1,10 @@
 {
-    "buildVersion": 1540919387866,
+    "buildVersion": 1540961103023,
     "build": {
         "ssr": false,
-        "publicPath": "/",
-        "compress": false,
-        "cssExtract": false
+        "publicPath": "/xapp_frontend/dist/",
+        "compress": true,
+        "cssExtract": true
     },
     "middleware": {
         "all": [],
@@ -13,7 +13,7 @@
     },
     "router": {
         "mode": "hash",
-        "base": "/",
+        "base": "/xapp_frontend/dist/",
         "pageTransition": {
             "type": "slide",
             "transitionClass": "slide"
@@ -26,7 +26,7 @@
     },
     "serviceWorker": {
         "enable": true,
-        "swDest": "F:\\project\\xapp_frontend\\dist\\service-worker.js"
+        "swDest": "E:\\xapp_frontend\\dist\\service-worker.js"
     },
     "skeleton": {
         "enable": true,

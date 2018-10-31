@@ -53,6 +53,8 @@ export default {
 
 <style lang="stylus" scoped>
 ul.app-list {
+    padding-left: 0;
+
     li {
         list-style-type: none;
         border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);

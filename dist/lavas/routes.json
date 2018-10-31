@@ -45,6 +45,11 @@
             ]
         },
         {
+            "path": "/feedback",
+            "name": "feedback",
+            "meta": {}
+        },
+        {
             "path": "/",
             "name": "index",
             "meta": {}

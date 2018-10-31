@@ -45,6 +45,7 @@ export default {
 
 <style lang="stylus" scoped>
 .rank-list {
+    padding-left: 0;
     border-top: 0.5px solid rgba(0, 0, 0, 0.15);
     padding-top: 15px;
 
