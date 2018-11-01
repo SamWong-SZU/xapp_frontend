@@ -70,6 +70,16 @@
             "meta": {}
         },
         {
+            "path": "/submit",
+            "name": "submit",
+            "meta": {}
+        },
+        {
+            "path": "/thank",
+            "name": "thank",
+            "meta": {}
+        },
+        {
             "path": "/error",
             "name": "error",
             "meta": {},

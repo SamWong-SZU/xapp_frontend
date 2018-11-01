@@ -27,11 +27,12 @@ export default {
 };
 </script>
 <style lang="stylus">
-.thank-page{
+.thank-page {
     display: flex;
     justify-content: center;
     align-items: center;
-    p{
+
+    p {
         font-size: 18px;
         color: #999999;
     }

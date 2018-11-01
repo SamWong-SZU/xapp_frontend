@@ -43,7 +43,7 @@ export default {
                     show: true,
                     title: '提交PWA',
                     showMenu: false,
-                    showBack: false,
+                    showBack: '/about?nav=about',
                     showLogo: false,
                     actions: []
                 }
@@ -62,8 +62,10 @@ export default {
                 params[property.name] = property.value
             })
             params.type = this.$refs.type.value || ''
-            console.log(params)
+            this.AjaxService.feedback(params)
             this.reset()
+            this.$router.push({name:'thank',query:{nav:'about'}})
+
         }
     },
     activated () {
@@ -130,11 +132,11 @@ export default {
 
     button {
         background-color: #3399ff;
-        width: 100%;
-        position: absolute;
+        width: calc(100% + 40px);
+        bottom: 56px;
+        position: static;
         margin: 0px -20px;
         color: #fff;
-        z-index: 10000;
         font-size: 15px;
         height: 44px;
         padding: 0 32px;

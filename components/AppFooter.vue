@@ -1,4 +1,5 @@
 <template>
+<span id="footer-container">
     <v-bottom-nav
         :active.async="bottomNav"
         value
@@ -22,6 +23,7 @@
             <i class="iconfont icon-question-circle"></i>            
         </v-btn>
     </v-bottom-nav>
+</span>
 </template>
 
 <script>
@@ -42,6 +44,13 @@ export default {
         handleChangeNav(nav) {
             this.changeNav(nav)
         }
+    },
+    mounted () {
+        const h = document.getElementById('footer-container')
+        h.addEventListener('touchmove',function(event) {
+            console.log(event)
+            event.preventDefault();
+        })
     }
 };
 </script>

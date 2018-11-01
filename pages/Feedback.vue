@@ -58,7 +58,7 @@ export default {
                     this.email = ''
                     this.content = ''
                     this.showError = false
-                    this.$router.push({name:'Thank',query:{nav:'about'}})
+                    this.$router.push({name:'thank',query:{nav:'about'}})
                 })
             }
         }
@@ -103,11 +103,10 @@ export default {
     button {
         background-color: #3399ff;
         width: 100%;
-        bottom: 0px;
+        bottom: 56px;
         position: absolute;
         margin: 0px -20px;
         color: #fff;
-        z-index: 10000;
         font-size: 15px;
         height: 44px;
         padding: 0 32px;

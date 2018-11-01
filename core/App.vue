@@ -10,13 +10,8 @@
                 @click-menu="handleClickHeaderMenu"
                 @click-back="handleClickHeaderBack">
             </app-header>
-            <!-- <app-sidebar
-                @hide-sidebar = "handleHideSidebar"
-                @show-sidebar = "handleShowSidebar"
-            >
-            </app-sidebar> -->
-            <!-- <app-footer :bottomNav="bottomNav" :changeNav="changeNav"></app-footer> -->
-            <footer><app-footer :bottomNav="bottomNav" :changeNav="changeNav"></app-footer></footer>
+            
+            <div class="footer-container"><app-footer :bottomNav="bottomNav" :changeNav="changeNav"></app-footer></div>
             <transition
                 :name="pageTransitionEffect"
                 @before-enter="handleBeforeEnter"
@@ -194,9 +189,13 @@ export default {
 $page-transition-duration = 0.35s;
 
 #app {
-    footer {
-        position: fixed;
+    .footer-container {
+        width: 100%;
+        height: 56px;
+        background: white;
+        z-index: 1999;
         bottom: 0;
+        position: fixed;
     }
 
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -235,9 +234,10 @@ $page-transition-duration = 0.35s;
         -webkit-overflow-scrolling: touch;
         background: white;
         overflow: scroll;
-        height: calc(100% - 56px - 52px);
-        height: -moz-calc(100% - 56px - 52px);
-        height: -webkit-calc(100% - 56px - 50px);
+        height: calc(100% - 52px);
+        height: -moz-calc(100% - 52px);
+        height: -webkit-calc(100% - 52px);
+        padding-bottom: 56px;
 
         &::-webkit-scrollbar {
             width: 0;

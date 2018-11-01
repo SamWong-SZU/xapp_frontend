@@ -1,7 +1,7 @@
 <template>
     <transition
         name="slide-down">
-        <header class="app-header-wrapper" v-show="show">
+        <header class="app-header-wrapper" id="header-container" v-show="show">
             <div class="app-header-left">
                 <v-btn
                     icon
@@ -51,6 +51,12 @@ import EventBus from '@/core/event-bus';
 
 export default {
     name: 'appHeader',
+    mounted () {
+        const h = document.getElementById('header-container')
+        h.addEventListener('touchmove',function(event) {
+            event.preventDefault();
+        })
+    },
     computed: {
         ...mapState('appShell/appHeader', [
             'show',
