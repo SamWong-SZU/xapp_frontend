@@ -103,8 +103,8 @@ export default {
     button {
         background-color: #3399ff;
         width: 100%;
-        bottom: 56px;
-        position: fixed;
+        bottom: 0px;
+        position: absolute;
         margin: 0px -20px;
         color: #fff;
         z-index: 10000;
