@@ -424,7 +424,7 @@ export const keepAlivePages = routes.filter(route => route.keepAlive || route.me
 export function createRouter() {
     let router = new Router({
         mode: 'hash',
-        base: '/xapp_frontend/dist/',
+        base: '/',
         scrollBehavior,
         routes
     });

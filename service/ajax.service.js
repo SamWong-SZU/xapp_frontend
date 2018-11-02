@@ -1,5 +1,5 @@
 import axios from 'axios'
-const config = {
+const config = {l
     'development': {
         devUrl: '/api'
     },
@@ -21,7 +21,7 @@ const ajaxService = {
         return isProd ? axios.get(`${devUrl}/getAppListByType/${type}`) : require('@/mockdata/getAppListByType.json')
     },
     getAppById (id) {
-        return isProd ? axios.get(`${devUrl}/getAppById`) : require('@/mockdata/getAppById.json')
+        return isProd ? axios.get(`${devUrl}/getAppById/${id}`) : require('@/mockdata/getAppById.json')
     },
     announcements () {
         return isProd ? axios.get(`${devUrl}/getAnnouncements`) : require('@/mockdata/announcements.json')

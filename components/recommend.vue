@@ -49,11 +49,9 @@ export default {
         }
     },
     mounted () {
-        setTimeout(()=>{
-            const data = this.AjaxService.getRecommendList()
-            this.list = data.data.list 
-            this.setUlScroll()
-        },1000)
+        const data = this.AjaxService.getRecommendList()
+        this.list = data.data.list 
+        this.setUlScroll()
     }
 }
 </script>

@@ -1,9 +1,9 @@
-importScripts("/xapp_frontend/dist/precache-manifest.18b97c8dee3f98a6b8b67a0a01b9bbf2.js");
+importScripts("/precache-manifest.d394336955f0b6b3e787e0248225d0d8.js");
 
 
-        importScripts('/xapp_frontend/dist/static/workbox-v3.6.2/workbox-sw.js');
+        importScripts('/static/workbox-v3.6.2/workbox-sw.js');
         workbox.setConfig({
-            modulePathPrefix: '/xapp_frontend/dist/static/workbox-v3.6.2/'
+            modulePathPrefix: '/static/workbox-v3.6.2/'
         });
     /**
  * @file service-worker.js with workbox api
@@ -50,4 +50,4 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
 //         ]
 //     })
 // );
-workbox.routing.registerNavigationRoute('/xapp_frontend/dist/index.html');
+workbox.routing.registerNavigationRoute('/index.html');
