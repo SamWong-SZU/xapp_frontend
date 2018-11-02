@@ -44,9 +44,7 @@ export default {
     },
     async mounted() {
         const res = await this.request(this.type)
-        if (res.resultCode === 0) {
-            this.data = res.data.list
-        }
+        this.data = res.data.data.list
     },
 }
 </script>

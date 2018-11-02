@@ -37,8 +37,8 @@ export default {
         }
     },
     mounted () {
-        const data = this.AjaxService.getTopList()
-        this.list = data.data.list
+        const res = this.AjaxService.getTopList()
+        this.list = res.data.data.list
     }
 }
 </script>

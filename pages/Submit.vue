@@ -59,6 +59,7 @@ export default {
             console.log(this.$refs.form.name.value)
             const params = {}
             Array.from(this.$refs.form).forEach((property)=>{
+                if (property.name)
                 params[property.name] = property.value
             })
             params.type = this.$refs.type.value || ''
