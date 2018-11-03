@@ -36,8 +36,8 @@ export default {
             fadeListNum: 5
         }
     },
-    mounted () {
-        const res = this.AjaxService.getTopList()
+    async mounted () {
+        const res = await this.AjaxService.getTopList()
         this.list = res.data.data.list
     }
 }

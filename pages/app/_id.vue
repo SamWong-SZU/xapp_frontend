@@ -45,7 +45,7 @@ export default {
         const from = this.$route.query.from
         if (from) this.state.appHeaderState.showBack = from
         const res = await this.AjaxService.getAppById(this.$route.params.id)
-        this.data = res.data
+        this.data = res.data.data
         this.state.appHeaderState.title = res.data.name
         this.setState(this.$store,this.state)
     },

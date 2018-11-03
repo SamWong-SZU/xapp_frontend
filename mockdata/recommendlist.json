@@ -1,67 +1,69 @@
 {
-    "resultCode": 0,
     "data": {
-        "list": [
-            {
-                "id": 1,
-                "img": "https:\/\/www.howtogeek.com\/wp-content\/uploads\/2018\/06\/mojave-wallpaper.jpg",
-                "name": "appName0",
-                "description": "description0"
-            },
-            {
-                "id": 2,
-                "img": "https:\/\/www.howtogeek.com\/wp-content\/uploads\/2018\/06\/mojave-wallpaper.jpg",
-                "name": "appName1",
-                "description": "description1"
-            },
-            {
-                "id": 3,
-                "img": "https:\/\/www.howtogeek.com\/wp-content\/uploads\/2018\/06\/mojave-wallpaper.jpg",
-                "name": "appName2",
-                "description": "description2"
-            },
-            {
-                "id": 4,
-                "img": "https:\/\/www.howtogeek.com\/wp-content\/uploads\/2018\/06\/mojave-wallpaper.jpg",
-                "name": "appName3",
-                "description": "description3"
-            },
-            {
-                "id": 5,
-                "img": "https:\/\/www.howtogeek.com\/wp-content\/uploads\/2018\/06\/mojave-wallpaper.jpg",
-                "name": "appName4",
-                "description": "description4"
-            },
-            {
-                "id": 6,
-                "img": "https:\/\/www.howtogeek.com\/wp-content\/uploads\/2018\/06\/mojave-wallpaper.jpg",
-                "name": "appName5",
-                "description": "description5"
-            },
-            {
-                "id": 7,
-                "img": "https:\/\/www.howtogeek.com\/wp-content\/uploads\/2018\/06\/mojave-wallpaper.jpg",
-                "name": "appName6",
-                "description": "description6"
-            },
-            {
-                "id": 8,
-                "img": "https:\/\/www.howtogeek.com\/wp-content\/uploads\/2018\/06\/mojave-wallpaper.jpg",
-                "name": "appName7",
-                "description": "description7"
-            },
-            {
-                "id": 9,
-                "img": "https:\/\/www.howtogeek.com\/wp-content\/uploads\/2018\/06\/mojave-wallpaper.jpg",
-                "name": "appName8",
-                "description": "description8"
-            },
-            {
-                "id": 10,
-                "img": "https:\/\/www.howtogeek.com\/wp-content\/uploads\/2018\/06\/mojave-wallpaper.jpg",
-                "name": "appName9",
-                "description": "description9"
-            }
-        ]
+        "resultCode": 0,
+        "data": {
+            "list": [
+                {
+                    "id": 1,
+                    "img": "https:\/\/www.howtogeek.com\/wp-content\/uploads\/2018\/06\/mojave-wallpaper.jpg",
+                    "name": "appName0",
+                    "description": "description0"
+                },
+                {
+                    "id": 2,
+                    "img": "https:\/\/www.howtogeek.com\/wp-content\/uploads\/2018\/06\/mojave-wallpaper.jpg",
+                    "name": "appName1",
+                    "description": "description1"
+                },
+                {
+                    "id": 3,
+                    "img": "https:\/\/www.howtogeek.com\/wp-content\/uploads\/2018\/06\/mojave-wallpaper.jpg",
+                    "name": "appName2",
+                    "description": "description2"
+                },
+                {
+                    "id": 4,
+                    "img": "https:\/\/www.howtogeek.com\/wp-content\/uploads\/2018\/06\/mojave-wallpaper.jpg",
+                    "name": "appName3",
+                    "description": "description3"
+                },
+                {
+                    "id": 5,
+                    "img": "https:\/\/www.howtogeek.com\/wp-content\/uploads\/2018\/06\/mojave-wallpaper.jpg",
+                    "name": "appName4",
+                    "description": "description4"
+                },
+                {
+                    "id": 6,
+                    "img": "https:\/\/www.howtogeek.com\/wp-content\/uploads\/2018\/06\/mojave-wallpaper.jpg",
+                    "name": "appName5",
+                    "description": "description5"
+                },
+                {
+                    "id": 7,
+                    "img": "https:\/\/www.howtogeek.com\/wp-content\/uploads\/2018\/06\/mojave-wallpaper.jpg",
+                    "name": "appName6",
+                    "description": "description6"
+                },
+                {
+                    "id": 8,
+                    "img": "https:\/\/www.howtogeek.com\/wp-content\/uploads\/2018\/06\/mojave-wallpaper.jpg",
+                    "name": "appName7",
+                    "description": "description7"
+                },
+                {
+                    "id": 9,
+                    "img": "https:\/\/www.howtogeek.com\/wp-content\/uploads\/2018\/06\/mojave-wallpaper.jpg",
+                    "name": "appName8",
+                    "description": "description8"
+                },
+                {
+                    "id": 10,
+                    "img": "https:\/\/www.howtogeek.com\/wp-content\/uploads\/2018\/06\/mojave-wallpaper.jpg",
+                    "name": "appName9",
+                    "description": "description9"
+                }
+            ]
+        }
     }
 }

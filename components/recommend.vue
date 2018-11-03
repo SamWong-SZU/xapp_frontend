@@ -14,7 +14,7 @@
                     <p class="brief">{{item.description}}</p>
                 </router-link>
             </li>
-            <li v-if="!list" v-for="i in fadeListNum">
+            <!-- <li v-if="!list" v-for="i in fadeListNum">
                 <a>
                     <div class="cover-container" >
                         <div class="cover"></div>
@@ -22,7 +22,7 @@
                     <span class="recommend-title">&nbsp</span>
                     <p class="brief">&nbsp</p>
                 </a>
-            </li>
+            </li> -->
             <li></li>
         </ul>
     </section>
@@ -48,9 +48,9 @@ export default {
             })
         }
     },
-    mounted () {
-        const data = this.AjaxService.getRecommendList()
-        this.list = data.data.list 
+    async created () {
+        const res = await this.AjaxService.getRecommendList()
+        this.list = res.data.data.list
         this.setUlScroll()
     }
 }

@@ -1,5 +1,5 @@
 import axios from 'axios'
-const config = {l
+const config = {
     'development': {
         devUrl: '/api'
     },

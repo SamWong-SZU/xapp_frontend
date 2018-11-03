@@ -1,5 +1,5 @@
 {
-    "resultCode": 0,
+    "data": {"resultCode": 0,
     "data": {
         "name": "appName3",
         "icon": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/1\/17\/WeChat_logo.png",
@@ -23,5 +23,5 @@
                 "screenShot": "https:\/\/www.howtogeek.com\/wp-content\/uploads\/2018\/06\/mojave-wallpaper.jpg"
             }
         ]
-    }
+    }}
 }

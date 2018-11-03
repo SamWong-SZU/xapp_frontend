@@ -1,7 +1,7 @@
 {
-    "resultCode": 0,
+    "data": {"resultCode": 0,
     "data": {
         "content": "content4",
         "timestamp": 1540084284
-    }
+    }}
 }

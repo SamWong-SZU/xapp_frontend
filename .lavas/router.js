@@ -26,7 +26,7 @@ import _cb0a25cdb618759f9ca0bc32beabf0ab from '@/pages/category/Game.vue';
     
 
     
-import _688067f53bd6b8bcf09991faaaa9ec03 from '@/pages/category/Life.vue';
+import _dd8c9853c9af3dc007b54dfd87b14658 from '@/pages/category/Lifestyle.vue';
     
 
     
@@ -104,10 +104,10 @@ let routes = [
                 "name": "categoryGame"
             },
             {
-                "path": "life",
-                "component": _688067f53bd6b8bcf09991faaaa9ec03,
+                "path": "lifestyle",
+                "component": _dd8c9853c9af3dc007b54dfd87b14658,
                 "meta": {},
-                "name": "categoryLife"
+                "name": "categoryLifestyle"
             },
             {
                 "path": "tool",

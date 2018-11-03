@@ -48,7 +48,6 @@ export default {
     mounted () {
         const h = document.getElementById('footer-container')
         h.addEventListener('touchmove',function(event) {
-            console.log(event)
             event.preventDefault();
         })
     }

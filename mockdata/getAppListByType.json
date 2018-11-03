@@ -1,5 +1,5 @@
 {
-    "resultCode": 0,
+    "data": {"resultCode": 0,
     "data": {
         "list": [
             {
@@ -53,5 +53,5 @@
                 "name": "appName9"
             }
         ]
-    }
+    }}
 }

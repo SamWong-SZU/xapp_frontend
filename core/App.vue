@@ -99,7 +99,6 @@ export default {
             'savePageScrollPosition'
         ]),
         changeNav(nav) {
-            console.log(nav)
             const fromNav = this.bottomNav
             this.bottomNav = nav
             if (this.bottomNav === fromNav) {
