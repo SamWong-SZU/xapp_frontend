@@ -1,7 +1,7 @@
 import axios from 'axios'
 const config = {
     'development': {
-        devUrl: '/api'
+        devUrl: '//xapp.zone/api'
     },
     'production': {
         devUrl: '/api'
@@ -12,19 +12,19 @@ const devUrl = config[process.env.NODE_ENV].devUrl || config['production'].devUr
 const isProd = process.env.NODE_ENV === 'production'
 const ajaxService = {
     getRecommendList () {
-        return isProd ? axios.get(`${devUrl}/getRecommendList`) : require('@/mockdata/recommendlist.json')
+        return axios.get(`${devUrl}/getRecommendList`)
     },
     getTopList () {
-        return isProd ? axios.get(`${devUrl}/getTopList`) : require('@/mockdata/toplist.json')
+        return axios.get(`${devUrl}/getTopList`)
     },
     getAppListByType (type) {
-        return isProd ? axios.get(`${devUrl}/getAppListByType/${type}`) : require('@/mockdata/getAppListByType.json')
+        return axios.get(`${devUrl}/getAppListByType/${type}`)
     },
     getAppById (id) {
-        return isProd ? axios.get(`${devUrl}/getAppById/${id}`) : require('@/mockdata/getAppById.json')
+        return axios.get(`${devUrl}/getAppById/${id}`)
     },
     announcements () {
-        return isProd ? axios.get(`${devUrl}/getAnnouncements`) : require('@/mockdata/announcements.json')
+        return axios.get(`${devUrl}/getAnnouncements`)
     },
     feedback (param = {}) {
         return axios.post(`${devUrl}/feedback`, param)
