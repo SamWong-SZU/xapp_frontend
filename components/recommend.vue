@@ -97,6 +97,7 @@ h2 {
     }
 
     .cover-container {
+        background-size: cover !important;
         width: 100%;
         padding-top: 64%;
         position: relative;
