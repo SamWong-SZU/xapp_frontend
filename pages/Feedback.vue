@@ -10,6 +10,7 @@
           v-model="content"
           v-on:input="validateAdvice"
         ></v-textarea>
+        {{a}}
         <button @click="submit">
             提交反馈
         </button>
@@ -25,6 +26,7 @@ export default {
     name: 'Feedback',
     data () {
         return {
+            a:'',
             textLimit:500,
             email:'',
             showError:false,
@@ -49,7 +51,7 @@ export default {
             return result
         },
         validateAdvice(){
-            return this.content > 0 && this.content <= this.textLimit
+            return this.content.length > 0 && this.content.length <= this.textLimit
         },
         submit () {
             if (this.validateEmail() && this.validateAdvice()) {

@@ -292,5 +292,8 @@ $page-transition-duration = 0.35s;
             }
         }
     }
+    .v-item-group.v-bottom-nav .v-btn--active {
+        color: #39f !important;
+    }
 }
 </style>

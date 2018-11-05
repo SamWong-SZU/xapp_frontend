@@ -23,10 +23,10 @@ if (process.argv.length >= 3 && process.argv[2] !== 'dev') {
  */
 var proxyTable = {
     // proxy table example
-    // '/erp_sale/*': {
-    //     target: 'http://erp2.hwdev.pagoda.com.cn',
-    //     changeOrigin: true
-    // }
+    '/api': {
+        target: 'https://xapp.zone/',
+        changeOrigin: true
+    }
     //http://erp2.hwtest.pagoda.com.cn/erp_sale/SalConsignOutDetailService/findGoodsOutDetail
 };
 

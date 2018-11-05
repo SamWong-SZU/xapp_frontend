@@ -11,8 +11,8 @@
                     <span class="app-name">{{item.name}}</span>
                     <div></div>
                     <span class="index-none">{{index+1}}</span>
-                    <span class="category" v-if="item.type">{{item.type}}</span>
-                    <span class="category" v-else>{{type}}</span>
+                    <span class="category" v-if="item.type">{{getTypeCN(item.type)}}</span>
+                    <span class="category" v-else>{{getTypeCN(type)}}</span>
                 </div>
             </router-link>
             <div style="clear:both"></div>
@@ -21,8 +21,12 @@
 </template>
 
 <script>
+import {mapGetters} from 'vuex';
 export default {
     name:"appList",
+    computed: {
+        ...mapGetters({getTypeCN:'defaultSetting/getTypeCN'})
+    },
     props:{
         type:{
             type: String
@@ -90,6 +94,7 @@ ul.app-list {
 
                 .category {
                     color: #999;
+                    font-size:14px
                 }
             }
         }

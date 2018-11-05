@@ -14,7 +14,7 @@
                         query:{nav:$route.query.nav}}">
                     <img :src="item.icon">
                     <span class="app-name">{{item.name}}</span>
-                    <span class="category">{{item.type}}</span>
+                    <span class="category">{{getTypeCN(item.type)}}</span>
                  </router-link>
             </li>
             <li v-if="!list" v-for="i in fadeListNum">            
@@ -32,7 +32,7 @@ import {mapGetters} from 'vuex';
 export default {
     name: 'rank',
     computed: {
-        ...mapGetters(['defaultSetting/getTypeCN'])
+        ...mapGetters({getTypeCN:'defaultSetting/getTypeCN'})
     },
     data () {
         return {
@@ -41,7 +41,6 @@ export default {
         }
     },
     async mounted () {
-        console.log(this.getTypeCN)
         const res = await this.AjaxService.getTopList()
         this.list = res.data.data.list
     }
@@ -123,7 +122,7 @@ export default {
 
                 span.category {
                     display: block;
-                    font-size: 14px;
+                    font-size: 12px !important;
                     color: #999999;
                     text-transform: capitalize;
                     line-height: 16px;

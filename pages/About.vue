@@ -1,8 +1,8 @@
 <template>
     <div class="about-page">
-        <div class="qrcode-container" v-show="showQr" @click="showQr=false"><img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example"></div>
+        <div class="qrcode-container" v-show="showQr" @click="showQr=false"><img src="https://i.loli.net/2018/11/05/5be063ceae197.jpg"></div>
         <h2>XApp空间是什么</h2>
-        <p class="bottom">App是PWA (Progressive Web Apps) 的应用商店。在这里, 您可以找到许多跨平台的 (同时适用于iOS、安卓、PC) , 基于网页技术的应用程序。</p>
+        <p class="bottom">XApp空间是中国首个PWA (Progressive Web Apps) 应用商店。在这里, 您可以找到许多跨平台的 (同时适用于iOS、安卓、PC) , 基于网页技术的应用程序。</p>
         <section class="follow">
             <h2>关注我们</h2>
             <p>关注我们的微信公众号，获取更多消息。</p>
@@ -13,13 +13,13 @@
         </section>
         <h2 style="margin-top:20px">PWA是什么？</h2>
         <p>渐进式网页应用程序（PWA - Progressive Web App）是应用程序的未来。无需下载，不占空间，添加主屏，离线可用——它们是小程序的终极形态。</p>
-        <p class="bottom">这些应用程序提供与原生应用程序相同的功能，开发人员可以使用自己习惯的Web开发工具和语言，来制作应用程序，并且不再需要许可证来分发它们。</p>
+        <p class="bottom">这些应用程序提供与原生应用程序几乎相同的功能。开发人员可以使用自己喜爱的Web开发工具和语言，来制作PWA应用程序，并且不再需要许可证来分发它们。</p>
         <h2>如何安装PWA？</h2>
-        <p class="bottom">App空间建议——将您喜爱的PWA添加到您的主屏，访问更快速。</p>
+        <p class="bottom">XApp空间建议——将您喜爱的PWA添加到您的主屏，访问更快速。</p>
         <h2>安卓</h2>
-        <p class="bottom">当您打开PWA应用时，它们中的大部分会自动提示您安装。如果没有，点击（垂直三点图标）按钮，然后选择“添加到主屏幕”。</p>
+        <p class="bottom">推荐使用Chrome浏览器。当您打开PWA应用时，它们中的大部分会自动提示您安装。如果没有，点击（垂直三点图标）按钮，然后选择“添加到主屏幕”。</p>
         <h2>iOS</h2>
-        <p class="bottom">在Safari中使用PWA时，点击浏览器中的    按钮。 在显示的选项中向左滚动，然后选择“添加到主屏幕”。</p>
+        <p class="bottom">在Safari中使用PWA时，点击浏览器中的<i class="iconfont icon-upload"></i>按钮。 在显示的选项中向左滚动，然后选择“添加到主屏幕”。</p>
         <h2>PWA相对传统应用程序的优势？</h2>
         <p class="bottom">PWA比原生应用更好，其优势有：
             <ul>
@@ -29,10 +29,21 @@
                 <li><h4>搜索引擎友好</h4><p>与传统应用程序不同，PWA可被被搜索引擎检索，使新用户更容易找到它们。</p></li>
             </ul>
         </p>
+
+        <h2>PWA与小程序有什么区别？</h2>
+        <p class="bottom">设计思想上，微信、支付宝、百度，以及即将推出的头条系小程序和PWA是近似的。但PWA有其独特的优势。
+            <ul>
+                <li><h4>用户触及力</h4><p>用户可能不会安装抖音、百度，甚至支付宝、微信，但手机上一定会有浏览器。这就意味着你的PWA应用可以触及所有潜在用户。</p></li>
+                <li><h4>优势融合</h4><p>你可以在微信小程序上使用支付宝付款吗？现在，PWA可以在提供更好的体验的同时，融合所有生态平台的能力，打造一个无比强大的应用。</p></li>
+                <li><h4>去中心化</h4><p>由于PWA基于浏览器，避免了平台“封杀”、“限流”等不正当竞争手段。任何平台在万维网，都不是中心。</p></li>
+            </ul>
+        </p>
+
+
         <h2>如何提交我的PWA到XApp空间？</h2>
         <p class="bottom">请<span class="click-here" @click="toSubmit">点击这里</span>向我们提交您的PWA，我们将在24小时内完成审核</p>
         <h2>如何联系你？</h2>
-        <p>如果您有任何问题或者意见，请<span class="click-here" @click="toFeedBack">点击这里</span>向我们反馈，我们将会尽快查看</p>
+        <p>如果您有任何问题或者意见，请<span class="click-here" @click="toFeedBack">点击这里</span>或者发送邮件到xapp.zone@gmail.com向我们反馈，我们将会尽快查看</p>
 
     </div>
 </template>
@@ -93,6 +104,9 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
+        img {
+            width:200px;
+        }
     }
 
     .click-here {

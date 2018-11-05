@@ -11,7 +11,7 @@ export const state = () => {
 };
 
 export const getters = {
-    getTypeCN: (state, type) => {
+    getTypeCN: state => type => {
         return state.TYPE_MAP[type]
     }
 };

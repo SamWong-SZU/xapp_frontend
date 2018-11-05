@@ -1,7 +1,7 @@
 import axios from 'axios'
 const config = {
     'development': {
-        devUrl: '//xapp.zone/api'
+        devUrl: '/api'
     },
     'production': {
         devUrl: '/api'

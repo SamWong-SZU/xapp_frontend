@@ -11,9 +11,9 @@
             <router-link :to="{name: 'categoryFood',query:{nav:$route.query.nav}}">
                 <li><i class="iconfont icon-food"></i>美食</li>
             </router-link>
-            <router-link :to="{name: 'categoryLifestyle',query:{nav:$route.query.nav}}">
+            <!-- <router-link :to="{name: 'categoryLifestyle',query:{nav:$route.query.nav}}">
                 <li><i class="iconfont icon-heart"></i>生活</li>
-            </router-link>
+            </router-link> -->
         </ul>
     </div>
 </template>

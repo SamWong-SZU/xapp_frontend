@@ -6,7 +6,7 @@
             </div>
             <div class="app-info">
                 <h1 class="app-title">{{data.name}}</h1>
-                <span class="app-category">{{data.type}}</span>
+                <span class="app-category">{{getTypeCN(data.type)}}</span>
                 <div></div>
                 <a :href="data.launchUrl" class="app-start" ><v-icon>launch</v-icon>启动应用</a>
             </div>
@@ -20,11 +20,15 @@
 </template>
 
 <script>
+import {mapGetters} from 'vuex';
 export default {
     name: 'appId',
     metaInfo: {
         title: 'X App',
         titleTemplate: '%s - PWA应用商店'
+    },
+    computed: {
+        ...mapGetters({getTypeCN:'defaultSetting/getTypeCN'})
     },
     data () {
         return {
@@ -89,7 +93,7 @@ export default {
 
             .app-category {
                 color: #999999;
-                font-size: 18px;
+                font-size: 16px;
                 text-transform: capitalize;
             }
 

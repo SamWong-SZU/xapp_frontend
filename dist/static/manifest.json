@@ -1,7 +1,7 @@
 {
-    "start_url": "/xapp_frontend/dist/#/",
-    "name": "Xapp",
-    "short_name": "Xapp",
+    "start_url": "/",
+    "name": "XApp空间",
+    "short_name": "XApp空间",
     "icons": [
         {
             "src": "img/icons/android-chrome-512x512.png",

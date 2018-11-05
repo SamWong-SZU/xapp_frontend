@@ -1,6 +1,6 @@
 {
     "mode": "hash",
-    "base": "/",
+    "base": "/xapp_frontend/dist/",
     "routes": [
         {
             "path": "/about",
