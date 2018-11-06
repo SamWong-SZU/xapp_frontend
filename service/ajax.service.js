@@ -28,6 +28,9 @@ const ajaxService = {
     },
     feedback (param = {}) {
         return axios.post(`${devUrl}/feedback`, param)
+    },
+    submitApp (param = {}) {
+        return axios.post(`${devUrl}/submitApp`, param)
     }
 
 }

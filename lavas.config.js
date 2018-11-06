@@ -8,7 +8,7 @@
 const path = require('path');
 const BUILD_PATH = path.resolve(__dirname, 'dist');
 const isDev = process.env.NODE_ENV === 'development';
-const isGitPage = true
+const isGitPage = false
 const setPath = isGitPage ? '/xapp_frontend/dist/' : '/'
 const config = {
     dev: {
