@@ -4,27 +4,27 @@
     "short_name": "XApp空间",
     "icons": [
         {
-            "src": "img/icons/android-chrome-512x512.png",
+            "src": "img/icons/favicon.ico",
             "type": "image/png",
             "sizes": "512x512"
         },
         {
-            "src": "img/icons/android-chrome-192x192.png",
+            "src": "img/icons/favicon.ico",
             "type": "image/png",
             "sizes": "192x192"
         },
         {
-            "src": "img/icons/apple-touch-icon-180x180.png",
+            "src": "img/icons/favicon.ico",
             "type": "image/png",
             "sizes": "180x180"
         },
         {
-            "src": "img/icons/apple-touch-icon-152x152.png",
+            "src": "img/icons/favicon.ico",
             "type": "image/png",
             "sizes": "152x152"
         },
         {
-            "src": "img/icons/android-chrome-144x144.png",
+            "src": "img/icons/favicon.ico",
             "type": "image/png",
             "sizes": "144x144"
         }

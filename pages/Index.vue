@@ -30,7 +30,7 @@ export default {
             state:{
                 appHeaderState:{
                     show: true,
-                    title: 'X App',
+                    title: 'XApp空间',
                     showMenu: false,
                     showBack: false,
                     showLogo: false,

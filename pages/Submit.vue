@@ -13,7 +13,8 @@
             <input type="text" class="none-width" name="name" placeholder="名称"></input>
             <input type="text" class="none-width" name="description" placeholder="描述"></input>
             <input type="text" class="none-width" name="icon" placeholder="图标URL"></input>
-            <v-select ref="type" label="分类" v-bind:class="{'type-error':typeError}" name="type" :items="items" itemText="label" itemValue="value" ></v-select>
+            <v-select ref="type" label="分类" v-bind:class="{'type-error':typeError}" name="type" 
+                                :items="items" itemText="label" itemValue="value" ></v-select>
             <button type="button" @click="submit">提交</button>
         </form>
     </div>
@@ -58,8 +59,8 @@ export default {
             this.$refs.type.reset()
         },
         validateType () {
-            if (this.$refs.type.value) {
-                this.urlError = false
+            if (this.$refs.type.initialValue) {
+                this.typeError = false
                 return true
             }
             this.typeError = true
@@ -73,14 +74,19 @@ export default {
             this.urlError = true
             return false
         },
+        validate () {
+            const f1 = this.validateUrl()
+            const f2 = this.validateType()
+            return f1 && f2
+        },
         submit () {
-            if (this.validateType() && this.validateUrl()) {
+            if (this.validate()) {
                 const params = {}
                 Array.from(this.$refs.form).forEach((property)=>{
                     if (property.name)
                     params[property.name] = property.value
                 })
-                params.type = this.$refs.type.value
+                params.type = this.$refs.type.initialValue
                 this.AjaxService.submitApp(params)
                 this.reset()
                 this.$router.push({name:'thank',query:{nav:'about'}})
@@ -164,6 +170,13 @@ export default {
 
     .submit-error {
         border: 1px solid red;
+    }
+}
+</style>
+<style lang="stylus">
+.type-error {
+    .v-input__slot{
+        border-bottom: 1px solid red;
     }
 }
 </style>
