@@ -21,7 +21,11 @@ export default {
     },
     metaInfo: {
         title: 'X App',
-        titleTemplate: '%s - PWA应用商店'
+        titleTemplate: '%s - PWA应用商店',
+        meta: [
+            {name: 'keywords', content: 'lavas PWA'},
+            {name: 'description', content: 'XApp是中国首个PWA（Progresssive Web App）应用商店。PWA提供了一种原生App的体验，是Web在移动端的最佳形态。PWA是小程序的最终形态。'}
+        ]
     },
     data () {
         return {

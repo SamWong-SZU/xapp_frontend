@@ -21,7 +21,11 @@
 export default {
     metaInfo: {
         title: 'X App',
-        titleTemplate: '%s - PWA应用商店'
+        titleTemplate: '%s - PWA应用商店',
+        meta: [
+            {name: 'keywords', content: 'lavas PWA'},
+            {name: 'description', content: '我们非常希望能得到你的反馈，我们将认真查看您的留言'}
+        ]
     },
     name: 'Feedback',
     data () {

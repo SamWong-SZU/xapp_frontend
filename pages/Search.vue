@@ -37,7 +37,11 @@ export default {
     },
     metaInfo: {
         title: 'X App',
-        titleTemplate: '%s - PWA应用商店'
+        titleTemplate: '%s - PWA应用商店',
+        meta: [
+            {name: 'keywords', content: 'lavas PWA'},
+            {name: 'description', content: 'XApp的分类页'}
+        ]
     },
     activated () {
         this.setState(this.$store,this.state)

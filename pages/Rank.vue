@@ -10,7 +10,11 @@ export default {
     },
     metaInfo: {
         title: 'X App',
-        titleTemplate: '%s - PWA应用商店'
+        titleTemplate: '%s - PWA应用商店',
+        meta: [
+            {name: 'keywords', content: 'lavas PWA'},
+            {name: 'description', content: '最受欢迎的PWA，添加到你的桌面尝鲜吧！'}
+        ]
     },
     name: 'category',
     data () {

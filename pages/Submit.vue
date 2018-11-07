@@ -28,7 +28,11 @@ export default {
     },
     metaInfo: {
         title: 'X App',
-        titleTemplate: '%s - PWA应用商店'
+        titleTemplate: '%s - PWA应用商店',
+        meta: [
+            {name: 'keywords', content: 'lavas PWA'},
+            {name: 'description', content: 'xapp.zone欢迎各位开发者提交你的PWA'}
+        ]
     },
     name: 'Submit',
     data () {
