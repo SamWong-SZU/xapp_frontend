@@ -5,9 +5,7 @@
         <section class="how-to-install">
             <h2>如何安装PWA应用</h2>
             <p>X App推荐您把PWA应用添加到你的主屏上，以获得更加接近原生App的体验。
-                <router-link :to="{
-                        name: 'about',
-                        query:{nav:'about'}}">查看如何添加到主屏。</router-link>
+                <router-link :to="{path:'/about#howtoinstall',query:{nav:'about'}}">查看如何添加到主屏。</router-link>
             </p>
         </section>
     </div>

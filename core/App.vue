@@ -176,6 +176,7 @@ export default {
     watch :{
         '$route' (to,from) {
             this.bottomNav = to.query.nav || 'home'
+            if (to.fullPath.indexOf('#howtoinstall')>0) return
             this.tabCache[this.bottomNav] = to.fullPath
         }
     }
@@ -292,6 +293,7 @@ $page-transition-duration = 0.35s;
             }
         }
     }
+
     .v-item-group.v-bottom-nav .v-btn--active {
         color: #39f !important;
     }

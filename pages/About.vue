@@ -14,7 +14,7 @@
         <h2 style="margin-top:20px">PWA是什么？</h2>
         <p>渐进式网页应用程序（PWA - Progressive Web App）是应用程序的未来。无需下载，不占空间，添加主屏，离线可用——它们是小程序的终极形态。</p>
         <p class="bottom">这些应用程序提供与原生应用程序几乎相同的功能。开发人员可以使用自己喜爱的Web开发工具和语言，来制作PWA应用程序，并且不再需要许可证来分发它们。</p>
-        <h2>如何安装PWA？</h2>
+        <h2 id="howtoinstall">如何安装PWA？</h2>
         <p class="bottom">XApp空间建议——将您喜爱的PWA添加到您的主屏，访问更快速。</p>
         <h2>安卓</h2>
         <p class="bottom">推荐使用Chrome浏览器。当您打开PWA应用时，它们中的大部分会自动提示您安装。如果没有，点击（垂直三点图标）按钮，然后选择“添加到主屏幕”。</p>
@@ -80,9 +80,20 @@ export default {
         },
         toSubmit () {
             this.$router.push({name:'submit',query:{nav:'about'}})
+        },
+        scroll () {
+            const ele = document.getElementById('howtoinstall')
+            const app = document.getElementsByClassName('app-view')[0]
+            app.scrollTop = ele.offsetTop
         }
     },
     activated () {
+        const fullPath =this.$route.fullPath
+        if (fullPath.indexOf('#howtoinstall') > 0) {
+            setTimeout(()=>{
+                this.scroll()
+            },100)
+        }
         this.setState(this.$store,this.state)
     }
 };
@@ -104,8 +115,9 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
+
         img {
-            width:200px;
+            width: 200px;
         }
     }
 
