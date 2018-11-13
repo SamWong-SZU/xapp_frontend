@@ -4,8 +4,7 @@
         <rank-list></rank-list>
         <section class="how-to-install">
             <h2>如何安装PWA应用</h2>
-            <p>X App推荐您把PWA应用添加到你的主屏上，以获得更加接近原生App的体验。
-                <router-link :to="{path:'/about#howtoinstall',query:{nav:'about'}}">查看如何添加到主屏。</router-link>
+                <router-link :to="{path:'/about',query:{nav:'about'}}">查看如何添加到主屏。</router-link>
             </p>
         </section>
     </div>
@@ -20,11 +19,10 @@ export default {
         recommend,rankList
     },
     metaInfo: {
-        title: 'X App',
+        title: 'PWA DEMO',
         titleTemplate: '%s - PWA应用商店',
         meta: [
             {name: 'keywords', content: 'lavas PWA'},
-            {name: 'description', content: 'XApp是中国首个PWA（Progresssive Web App）应用商店。PWA提供了一种原生App的体验，是Web在移动端的最佳形态。PWA是小程序的最终形态。'}
         ]
     },
     data () {
@@ -32,7 +30,7 @@ export default {
             state:{
                 appHeaderState:{
                     show: true,
-                    title: 'XApp空间',
+                    title: 'PWA DEMO',
                     showMenu: false,
                     showBack: false,
                     showLogo: false,

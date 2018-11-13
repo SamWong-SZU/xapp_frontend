@@ -20,7 +20,7 @@
 <script>
 export default {
     metaInfo: {
-        title: 'X App',
+        title: 'PWA DEMO',
         titleTemplate: '%s - PWA应用商店',
         meta: [
             {name: 'keywords', content: 'lavas PWA'},

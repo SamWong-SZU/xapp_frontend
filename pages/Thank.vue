@@ -12,7 +12,7 @@ export default {
             state:{
                 appHeaderState: {
                     show: true,
-                    title: 'X App',
+                    title: 'PWA DEMO',
                     showMenu: false,
                     showBack: '/about?nav=about',
                     showLogo: false,

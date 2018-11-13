@@ -24,7 +24,7 @@ import {mapGetters} from 'vuex';
 export default {
     name: 'appId',
     metaInfo: {
-        title: 'X App',
+        title: 'PWA DEMO',
         titleTemplate: '%s - PWA应用商店'
     },
     computed: {

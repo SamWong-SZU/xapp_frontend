@@ -9,7 +9,7 @@ export default {
         appList
     },
     metaInfo: {
-        title: 'X App',
+        title: 'PWA DEMO',
         titleTemplate: '%s - PWA应用商店'
     },
     data () {
