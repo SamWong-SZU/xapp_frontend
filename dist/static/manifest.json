@@ -1,5 +1,5 @@
 {
-    "start_url": "/",
+    "start_url": "/xapp_frontend/dist",
     "name": "PAGODA",
     "short_name": "PAGODA",
     "icons": [
