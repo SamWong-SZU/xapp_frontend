@@ -1,0 +1,23 @@
+{
+    "data": {
+        "resultCode": 0,
+        "data": {
+            "name": "\u4e8c\u7ef4\u7801\u751f\u6210\u5668",
+            "icon": "https:\/\/i.loli.net\/2018\/10\/28\/5bd5375248e4a.png",
+            "description": "\u751f\u6210\u4e8c\u7ef4\u7801\u7684\u5c0f\u5de5\u5177\u3002",
+            "type": "tool",
+            "launchUrl": "https:\/\/roneetkumar.github.io\/code\/",
+            "screenShots": [
+                {
+                    "screenShot": "https:\/\/i.loli.net\/2018\/10\/28\/5bd55709b33c5.png"
+                },
+                {
+                    "screenShot": "https:\/\/i.loli.net\/2018\/10\/28\/5bd55709b9fe5.png"
+                },
+                {
+                    "screenShot": "https:\/\/i.loli.net\/2018\/10\/28\/5bd55709c7f0a.png"
+                }
+            ]
+        }
+    }
+}

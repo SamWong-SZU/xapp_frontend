@@ -1,0 +1,23 @@
+{
+    "data": {
+        "resultCode": 0,
+        "data": {
+            "name": "\u626b\u96f7",
+            "icon": "https:\/\/i.loli.net\/2018\/10\/28\/5bd536021904d.png",
+            "description": "\u60f3\u5f53\u5e74\uff0cWindows\u4e0a\u7684\u626b\u96f7\u6211\u4ece\u6765\u6ca1\u641e\u61c2\u3002",
+            "type": "game",
+            "launchUrl": "https:\/\/minesweeper.now.sh",
+            "screenShots": [
+                {
+                    "screenShot": "https:\/\/i.loli.net\/2018\/10\/28\/5bd5568a578b2.png"
+                },
+                {
+                    "screenShot": "https:\/\/i.loli.net\/2018\/10\/28\/5bd5568a75270.png"
+                },
+                {
+                    "screenShot": "https:\/\/i.loli.net\/2018\/10\/28\/5bd5568a8a113.png"
+                }
+            ]
+        }
+    }
+}

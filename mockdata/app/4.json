@@ -1,0 +1,26 @@
+{
+    "data": {
+        "resultCode": 0,
+        "data": {
+            "name": "\u6570\u72ec",
+            "icon": "https:\/\/i.loli.net\/2018\/10\/28\/5bd5349ddf01b.png",
+            "description": "\u6700\u8f7b\u91cf\u5316\u7684\u6570\u72ec\u6e38\u620f\u3002",
+            "type": "game",
+            "launchUrl": "https:\/\/sudoku.netlify.com",
+            "screenShots": [
+                {
+                    "screenShot": "https:\/\/i.loli.net\/2018\/10\/28\/5bd5559c4e9d4.png"
+                },
+                {
+                    "screenShot": "https:\/\/i.loli.net\/2018\/10\/28\/5bd5559c90daf.png"
+                },
+                {
+                    "screenShot": "https:\/\/i.loli.net\/2018\/10\/28\/5bd5559c9709d.png"
+                },
+                {
+                    "screenShot": "https:\/\/i.loli.net\/2018\/10\/28\/5bd5559c981f0.png"
+                }
+            ]
+        }
+    }
+}

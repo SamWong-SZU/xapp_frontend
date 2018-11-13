@@ -1,0 +1,17 @@
+{
+    "data": {
+        "resultCode": 0,
+        "data": {
+            "name": "\u4e8c\u7ef4\u7801\u8bfb\u53d6\u5668",
+            "icon": "https:\/\/i.loli.net\/2018\/10\/28\/5bd537bb4289e.png",
+            "description": "\u8bfb\u53d6\u4e8c\u7ef4\u7801\u5185\u5bb9\u7684\u5c0f\u5de5\u5177\u3002",
+            "type": "tool",
+            "launchUrl": "https:\/\/qrsnapper.com",
+            "screenShots": [
+                {
+                    "screenShot": "https:\/\/i.loli.net\/2018\/10\/28\/5bd557540801c.png"
+                }
+            ]
+        }
+    }
+}

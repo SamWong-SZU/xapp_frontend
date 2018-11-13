@@ -1,57 +1,49 @@
 {
-    "data": {"resultCode": 0,
     "data": {
-        "list": [
-            {
-                "id": 1,
-                "icon": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/1\/17\/WeChat_logo.png",
-                "name": "appName0"
-            },
-            {
-                "id": 2,
-                "icon": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/1\/17\/WeChat_logo.png",
-                "name": "appName1"
-            },
-            {
-                "id": 3,
-                "icon": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/1\/17\/WeChat_logo.png",
-                "name": "appName2"
-            },
-            {
-                "id": 4,
-                "icon": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/1\/17\/WeChat_logo.png",
-                "name": "appName3"
-            },
-            {
-                "id": 5,
-                "icon": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/1\/17\/WeChat_logo.png",
-                "name": "appName4"
-            },
-            {
-                "id": 6,
-                "icon": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/1\/17\/WeChat_logo.png",
-                "name": "appName5"
-            },
-            {
-                "id": 7,
-                "icon": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/1\/17\/WeChat_logo.png",
-                "name": "appName6"
-            },
-            {
-                "id": 8,
-                "icon": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/1\/17\/WeChat_logo.png",
-                "name": "appName7"
-            },
-            {
-                "id": 9,
-                "icon": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/1\/17\/WeChat_logo.png",
-                "name": "appName8"
-            },
-            {
-                "id": 10,
-                "icon": "https:\/\/upload.wikimedia.org\/wikipedia\/commons\/1\/17\/WeChat_logo.png",
-                "name": "appName9"
-            }
-        ]
-    }}
+        "resultCode": 0,
+        "data": {
+            "list": [
+                {
+                    "id": 1,
+                    "icon": "https:\/\/i.loli.net\/2018\/10\/28\/5bd530935f601.png",
+                    "name": "Dino Game"
+                },
+                {
+                    "id": 2,
+                    "icon": "https:\/\/i.loli.net\/2018\/10\/28\/5bd532cd51d62.png",
+                    "name": "\u5403\u8c46\u4eba"
+                },
+                {
+                    "id": 3,
+                    "icon": "https:\/\/i.loli.net\/2018\/10\/28\/5bd533fbe285d.png",
+                    "name": "\u6d82\u9e26\u677f\u7403"
+                },
+                {
+                    "id": 4,
+                    "icon": "https:\/\/i.loli.net\/2018\/10\/28\/5bd5349ddf01b.png",
+                    "name": "\u6570\u72ec"
+                },
+                {
+                    "id": 5,
+                    "icon": "https:\/\/i.loli.net\/2018\/10\/28\/5bd53547823ff.png",
+                    "name": "\u6447\u9ab0\u5b50"
+                },
+                {
+                    "id": 6,
+                    "icon": "https:\/\/i.loli.net\/2018\/10\/28\/5bd535af9064c.png",
+                    "name": "\u5efa\u9020\u9ad8\u5854"
+                },
+                {
+                    "id": 7,
+                    "icon": "https:\/\/i.loli.net\/2018\/10\/28\/5bd536021904d.png",
+                    "name": "\u626b\u96f7"
+                },
+                {
+                    "id": 8,
+                    "icon": "https:\/\/i.loli.net\/2018\/10\/28\/5bd5368570351.jpg",
+                    "name": "2048"
+                }
+            ]
+        }
+    }
 }

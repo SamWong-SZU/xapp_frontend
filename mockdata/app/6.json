@@ -1,0 +1,26 @@
+{
+    "data": {
+        "resultCode": 0,
+        "data": {
+            "name": "\u5efa\u9020\u9ad8\u5854",
+            "icon": "https:\/\/i.loli.net\/2018\/10\/28\/5bd535af9064c.png",
+            "description": "\u662f\u7537\u4eba\u5c31\u5efa\u9020100\u5c42\uff1f",
+            "type": "game",
+            "launchUrl": "https:\/\/appsco.pe\/launch\/towergame",
+            "screenShots": [
+                {
+                    "screenShot": "https:\/\/i.loli.net\/2018\/10\/28\/5bd556437b142.png"
+                },
+                {
+                    "screenShot": "https:\/\/i.loli.net\/2018\/10\/28\/5bd55643880a8.png"
+                },
+                {
+                    "screenShot": "https:\/\/i.loli.net\/2018\/10\/28\/5bd55643ac818.png"
+                },
+                {
+                    "screenShot": "https:\/\/i.loli.net\/2018\/10\/28\/5bd55643bd1f8.png"
+                }
+            ]
+        }
+    }
+}
