@@ -1,4 +1,4 @@
-importScripts("/xapp_frontend/dist/precache-manifest.f05989acd7807b2ef2beefa21e67cc0e.js");
+importScripts("/xapp_frontend/dist/precache-manifest.9e4c59b8e7d2de20de89094ff206da94.js");
 
 
         importScripts('/xapp_frontend/dist/static/workbox-v3.6.2/workbox-sw.js');
@@ -29,6 +29,12 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
  */
 // workbox.routing.registerRoute(/^https:\/\/lavas\.baidu\.com\/some\/api/,
 //     workbox.strategies.networkFirst());
+workbox.routing.registerRoute(
+    /.*\.(?:png|jpg|jpeg|svg|gif)/g,
+    new workbox.strategies.CacheFirst({
+        cacheName: 'my-image-cache',
+    })
+);
 
 
 /**

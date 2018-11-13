@@ -22,6 +22,12 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
  */
 // workbox.routing.registerRoute(/^https:\/\/lavas\.baidu\.com\/some\/api/,
 //     workbox.strategies.networkFirst());
+workbox.routing.registerRoute(
+    /.*\.(?:png|jpg|jpeg|svg|gif)/g,
+    new workbox.strategies.CacheFirst({
+        cacheName: 'my-image-cache',
+    })
+);
 
 
 /**
