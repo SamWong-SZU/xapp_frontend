@@ -11,21 +11,20 @@ const config = {
 const devUrl = config[process.env.NODE_ENV].devUrl || config['production'].devUrl
 const isProd = process.env.NODE_ENV === 'production'
 const ajaxService = {
-    axios,
     getRecommendList () {
-        return require('@/mockdata/recommendlist.json')
+        return axios.get(`${devUrl}/getRecommendList`)
     },
     getTopList () {
-        return require('@/mockdata/toplist.json')
+        return axios.get(`${devUrl}/getTopList`)
     },
     getAppListByType (type) {
-        return require('@/mockdata/getAppListByType.json')
+        return axios.get(`${devUrl}/getAppListByType/${type}`)
     },
     getAppById (id) {
-        return require(`@/mockdata/app/${id}.json`)
+        return axios.get(`${devUrl}/getAppById/${id}`)
     },
     announcements () {
-        return require('@/mockdata/recommendlist.json')
+        return axios.get(`${devUrl}/getAnnouncements`)
     },
     feedback (param = {}) {
         return axios.post(`${devUrl}/feedback`, param)
