@@ -22,14 +22,16 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
  */
 // workbox.routing.registerRoute(/^https:\/\/lavas\.baidu\.com\/some\/api/,
 //     workbox.strategies.networkFirst());
-workbox.router.registerRoute(
+workbox.routing.registerRoute(
     'https://xapp.zone/api/(.*)',
-    new workbox.strategies.networkFirst({ networkTimeoutSeconds: 3 })
+    new workbox.strategies.CacheFirst({
+        networkTimeoutSeconds: 3
+    })
 );
 workbox.routing.registerRoute(
     /.*\.(?:png|jpg|jpeg|svg|gif)/g,
     new workbox.strategies.CacheFirst({
-        cacheName: 'my-image-cache',
+        cacheName: 'my-image-cache'
     })
 );
 
