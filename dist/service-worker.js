@@ -1,4 +1,4 @@
-importScripts("/precache-manifest.7c24f4e2e0e95ae4075ec82e1e057e6b.js");
+importScripts("/precache-manifest.11c75a5f1bfd6bcd4038c4e44dc61d25.js");
 
 
         importScripts('/static/workbox-v3.6.2/workbox-sw.js');
@@ -27,14 +27,16 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
 /**
  * example runningCache with api
  */
-// workbox.routing.registerRoute(/^https:\/\/lavas\.baidu\.com\/some\/api/,
-//     workbox.strategies.networkFirst());
-workbox.routing.registerRoute(
-    'https://xapp.zone/api/(.*)',
-    new workbox.strategies.CacheFirst({
+workbox.routing.registerRoute(/^https:\/\/xapp\.zone\/api/,
+    new workbox.strategies.NetworkFirst({
         networkTimeoutSeconds: 3
-    })
-);
+    }));
+// workbox.routing.registerRoute(
+//     'https://xapp.zone/api/(.*)',
+//     new workbox.strategies.CacheFirst({
+//         networkTimeoutSeconds: 3
+//     })
+// );
 workbox.routing.registerRoute(
     /.*\.(?:png|jpg|jpeg|svg|gif)/g,
     new workbox.strategies.CacheFirst({
