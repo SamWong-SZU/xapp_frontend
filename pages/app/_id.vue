@@ -67,7 +67,7 @@ export default {
         }
     },
     activated() {
-        if(this.rendered && this.isEmptyObject(this.data)) this.getData()
+        // if(this.rendered && this.isEmptyObject(this.data)) this.getData()
         this.setState(this.$store,this.state)
     }
 };
