@@ -1,15 +1,15 @@
-importScripts("/xapp_frontend/dist/precache-manifest.9e4c59b8e7d2de20de89094ff206da94.js");
+importScripts("/xapp_frontend/dist/precache-manifest.59acb98024f745abab86b1f661bd819b.js");
 
 
-importScripts('/xapp_frontend/dist/static/workbox-v3.6.2/workbox-sw.js');
-workbox.setConfig({
-    modulePathPrefix: '/xapp_frontend/dist/static/workbox-v3.6.2/'
-});
-/**
-* @file service-worker.js with workbox api
-* @desc [example](https://workbox-samples.glitch.me/examples/workbox-sw/)
-* @author SamWong(200988743@qq.com)
-*/
+        importScripts('/xapp_frontend/dist/static/workbox-v3.6.2/workbox-sw.js');
+        workbox.setConfig({
+            modulePathPrefix: '/xapp_frontend/dist/static/workbox-v3.6.2/'
+        });
+    /**
+ * @file service-worker.js with workbox api
+ * @desc [example](https://workbox-samples.glitch.me/examples/workbox-sw/)
+ * @author SamWong(200988743@qq.com)
+ */
 
 /* globals workbox */
 workbox.core.setCacheNameDetails({

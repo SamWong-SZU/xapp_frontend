@@ -1,13 +1,13 @@
 
-importScripts('/xapp_frontend/dist/static/workbox-v3.6.2/workbox-sw.js');
-workbox.setConfig({
-    modulePathPrefix: '/xapp_frontend/dist/static/workbox-v3.6.2/'
-});
-/**
-* @file service-worker.js with workbox api
-* @desc [example](https://workbox-samples.glitch.me/examples/workbox-sw/)
-* @author SamWong(200988743@qq.com)
-*/
+        importScripts('/xapp_frontend/dist/static/workbox-v3.6.2/workbox-sw.js');
+        workbox.setConfig({
+            modulePathPrefix: '/xapp_frontend/dist/static/workbox-v3.6.2/'
+        });
+    /**
+ * @file service-worker.js with workbox api
+ * @desc [example](https://workbox-samples.glitch.me/examples/workbox-sw/)
+ * @author SamWong(200988743@qq.com)
+ */
 
 /* globals workbox */
 workbox.core.setCacheNameDetails({
