@@ -1,4 +1,4 @@
-importScripts("/precache-manifest.dbf3cee58fe669274a83a923e30355ea.js");
+importScripts("/precache-manifest.f335c93e1073105e2315556e4b69cbb1.js");
 
 
         importScripts('/static/workbox-v3.6.2/workbox-sw.js');
@@ -31,7 +31,7 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
 //     workbox.strategies.networkFirst());
 workboxSW.router.registerRoute(
     'https://xapp.zone/api/(.*)',
-    workboxSW.strategies.networkFirst({ networkTimeoutSeconds: 3 })
+    new workbox.strategies.networkFirst({ networkTimeoutSeconds: 3 })
 );
 workbox.routing.registerRoute(
     /.*\.(?:png|jpg|jpeg|svg|gif)/g,

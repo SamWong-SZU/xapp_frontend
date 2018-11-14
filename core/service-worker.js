@@ -24,7 +24,7 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
 //     workbox.strategies.networkFirst());
 workboxSW.router.registerRoute(
     'https://xapp.zone/api/(.*)',
-    new workboxSW.strategies.networkFirst({ networkTimeoutSeconds: 3 })
+    new workbox.strategies.networkFirst({ networkTimeoutSeconds: 3 })
 );
 workbox.routing.registerRoute(
     /.*\.(?:png|jpg|jpeg|svg|gif)/g,
