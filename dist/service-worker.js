@@ -1,4 +1,4 @@
-importScripts("/precache-manifest.f919b60ce1f42c17273707143e4dbe1d.js");
+importScripts("/precache-manifest.dbf3cee58fe669274a83a923e30355ea.js");
 
 
         importScripts('/static/workbox-v3.6.2/workbox-sw.js');
@@ -29,7 +29,16 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
  */
 // workbox.routing.registerRoute(/^https:\/\/lavas\.baidu\.com\/some\/api/,
 //     workbox.strategies.networkFirst());
-
+workboxSW.router.registerRoute(
+    'https://xapp.zone/api/(.*)',
+    workboxSW.strategies.networkFirst({ networkTimeoutSeconds: 3 })
+);
+workbox.routing.registerRoute(
+    /.*\.(?:png|jpg|jpeg|svg|gif)/g,
+    new workbox.strategies.CacheFirst({
+        cacheName: 'my-image-cache',
+    })
+);
 
 /**
  * example runningCache with resources from CDN

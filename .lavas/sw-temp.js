@@ -27,7 +27,16 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
  */
 // workbox.routing.registerRoute(/^https:\/\/lavas\.baidu\.com\/some\/api/,
 //     workbox.strategies.networkFirst());
-
+workboxSW.router.registerRoute(
+    'https://xapp.zone/api/(.*)',
+    workboxSW.strategies.networkFirst({ networkTimeoutSeconds: 3 })
+);
+workbox.routing.registerRoute(
+    /.*\.(?:png|jpg|jpeg|svg|gif)/g,
+    new workbox.strategies.CacheFirst({
+        cacheName: 'my-image-cache',
+    })
+);
 
 /**
  * example runningCache with resources from CDN
