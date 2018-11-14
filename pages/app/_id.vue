@@ -33,6 +33,7 @@ export default {
     data () {
         return {
             data:{},
+            rendered: false,
             state:{
                 appHeaderState: {
                     show: true,
@@ -45,15 +46,28 @@ export default {
             }
         }
     },
-    async created () {
-        const from = this.$route.query.from
-        if (from) this.state.appHeaderState.showBack = from
-        const res = await this.AjaxService.getAppById(this.$route.params.id)
-        this.data = res.data.data
-        this.state.appHeaderState.title = res.data.data.name
-        this.setState(this.$store,this.state)
+    created () {
+        this.rendered = true
+        this.getData()
+    },
+    methods: {
+        async getData() {
+            const from = this.$route.query.from
+            if (from) this.state.appHeaderState.showBack = from
+            const res = await this.AjaxService.getAppById(this.$route.params.id)
+            this.data = res.data.data
+            this.state.appHeaderState.title = res.data.data.name
+            this.setState(this.$store,this.state)
+        },
+        isEmptyObject(obj){
+            for(var key in obj) {
+                return false
+            }
+            return true
+        }
     },
     activated() {
+        if(this.rendered && this.isEmptyObject(this.data)) this.getData()
         this.setState(this.$store,this.state)
     }
 };

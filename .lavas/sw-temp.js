@@ -1,13 +1,13 @@
 
-        importScripts('/xapp_frontend/dist/static/workbox-v3.6.2/workbox-sw.js');
-        workbox.setConfig({
-            modulePathPrefix: '/xapp_frontend/dist/static/workbox-v3.6.2/'
-        });
-    /**
- * @file service-worker.js with workbox api
- * @desc [example](https://workbox-samples.glitch.me/examples/workbox-sw/)
- * @author SamWong(200988743@qq.com)
- */
+importScripts('/xapp_frontend/dist/static/workbox-v3.6.2/workbox-sw.js');
+workbox.setConfig({
+    modulePathPrefix: '/xapp_frontend/dist/static/workbox-v3.6.2/'
+});
+/**
+* @file service-worker.js with workbox api
+* @desc [example](https://workbox-samples.glitch.me/examples/workbox-sw/)
+* @author SamWong(200988743@qq.com)
+*/
 
 /* globals workbox */
 workbox.core.setCacheNameDetails({
@@ -25,15 +25,22 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
 /**
  * example runningCache with api
  */
-// workbox.routing.registerRoute(/^https:\/\/lavas\.baidu\.com\/some\/api/,
-//     workbox.strategies.networkFirst());
+workbox.routing.registerRoute(/^https:\/\/xapp\.zone\/api/,
+    new workbox.strategies.NetworkFirst({
+        networkTimeoutSeconds: 3
+    }));
+// workbox.routing.registerRoute(
+//     'https://xapp.zone/api/(.*)',
+//     new workbox.strategies.CacheFirst({
+//         networkTimeoutSeconds: 3
+//     })
+// );
 workbox.routing.registerRoute(
     /.*\.(?:png|jpg|jpeg|svg|gif)/g,
     new workbox.strategies.CacheFirst({
-        cacheName: 'my-image-cache',
+        cacheName: 'my-image-cache'
     })
 );
-
 
 /**
  * example runningCache with resources from CDN
