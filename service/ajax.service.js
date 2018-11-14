@@ -1,16 +1,17 @@
 import axios from 'axios'
 const config = {
     'development': {
-        devUrl: '/api'
+        devUrl: 'https:/xapp.zone/api'
     },
     'production': {
-        devUrl: '/api'
+        devUrl: 'https:/xapp.zone/api'
     }
 }
 
 const devUrl = config[process.env.NODE_ENV].devUrl || config['production'].devUrl
 const isProd = process.env.NODE_ENV === 'production'
 const ajaxService = {
+    axois,
     getRecommendList () {
         return require('@/mockdata/recommendlist.json')
     },
