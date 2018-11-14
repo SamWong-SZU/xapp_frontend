@@ -47,17 +47,21 @@ export default {
         }
     },
     created () {
-        this.rendered = true
         this.getData()
     },
     methods: {
-        async getData() {
+        getData() {
             const from = this.$route.query.from
             if (from) this.state.appHeaderState.showBack = from
-            const res = await this.AjaxService.getAppById(this.$route.params.id)
-            this.data = res.data.data
-            this.state.appHeaderState.title = res.data.data.name
-            this.setState(this.$store,this.state)
+            this.AjaxService.getAppById(this.$route.params.id).then((res)=>{
+                this.data = res.data.data
+                this.state.appHeaderState.title = res.data.data.name
+                this.setState(this.$store,this.state)
+                this.rendered = true
+            }).catch((e)=>{
+                console.log(e)
+                this.rendered = true
+            })
         },
         isEmptyObject(obj){
             for(var key in obj) {
@@ -67,7 +71,7 @@ export default {
         }
     },
     activated() {
-        // if(this.rendered && this.isEmptyObject(this.data)) this.getData()
+        if(this.rendered && this.isEmptyObject(this.data)) this.getData()
         this.setState(this.$store,this.state)
     }
 };
