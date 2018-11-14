@@ -11,7 +11,7 @@ const config = {
 const devUrl = config[process.env.NODE_ENV].devUrl || config['production'].devUrl
 const isProd = process.env.NODE_ENV === 'production'
 const ajaxService = {
-    axois,
+    axios,
     getRecommendList () {
         return require('@/mockdata/recommendlist.json')
     },
