@@ -1,4 +1,4 @@
-importScripts("/precache-manifest.f335c93e1073105e2315556e4b69cbb1.js");
+importScripts("/precache-manifest.a99c9e483ad75f6e08ffcee7b752f59b.js");
 
 
         importScripts('/static/workbox-v3.6.2/workbox-sw.js');
@@ -29,7 +29,7 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
  */
 // workbox.routing.registerRoute(/^https:\/\/lavas\.baidu\.com\/some\/api/,
 //     workbox.strategies.networkFirst());
-workboxSW.router.registerRoute(
+workbox.router.registerRoute(
     'https://xapp.zone/api/(.*)',
     new workbox.strategies.networkFirst({ networkTimeoutSeconds: 3 })
 );

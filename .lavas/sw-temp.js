@@ -27,7 +27,7 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
  */
 // workbox.routing.registerRoute(/^https:\/\/lavas\.baidu\.com\/some\/api/,
 //     workbox.strategies.networkFirst());
-workboxSW.router.registerRoute(
+workbox.router.registerRoute(
     'https://xapp.zone/api/(.*)',
     new workbox.strategies.networkFirst({ networkTimeoutSeconds: 3 })
 );
