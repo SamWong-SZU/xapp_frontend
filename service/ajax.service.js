@@ -1,10 +1,10 @@
 import axios from 'axios'
 const config = {
     'development': {
-        devUrl: 'https:/xapp.zone/api'
+        devUrl: 'https://xapp.zone/api'
     },
     'production': {
-        devUrl: 'https:/xapp.zone/api'
+        devUrl: 'https://xapp.zone/api'
     }
 }
 

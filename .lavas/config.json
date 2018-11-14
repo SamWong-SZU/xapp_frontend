@@ -1,5 +1,5 @@
 {
-    "buildVersion": 1542204687741,
+    "buildVersion": 1542204786742,
     "build": {
         "ssr": false,
         "publicPath": "/xapp_frontend/dist/",
